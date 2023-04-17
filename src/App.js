@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.css';
+import Header from './components/Header'
+// import Footer from './components/Footer';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Rex Greenway - Software Engineer: Website Coming Soon...
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+        <Header />
+        
+        <h1>~ Website Coming Soon ~</h1>
+
+        {/* <Footer /> */}
     </div>
   );
 }
+
 
 export default App;
