@@ -8,7 +8,7 @@ function App() {
     <div className={styles.App}>
         <Header />
         
-        <h1>~ Website Coming Soon ~</h1>
+        <h1>~ TEST Coming Soon ~</h1>
 
         {/* <Footer /> */}
     </div>
