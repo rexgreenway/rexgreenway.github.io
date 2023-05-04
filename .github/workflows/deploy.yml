@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - "dev" # change to the branch you wish to deploy from
+      - "dev"
 
 permissions:
   contents: read
