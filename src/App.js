@@ -36,9 +36,6 @@ export default function App() {
                     {/* Primarily working in Python I have experience with K8s, GCP, as well as frameworks such as Flask, ReactJS. */}
                 </TextBox>
 
-                <HorizontalLine />
-
-                <Links />
             </MainBody>
 
             <div>
