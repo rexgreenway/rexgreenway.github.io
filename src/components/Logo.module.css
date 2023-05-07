@@ -1,0 +1,10 @@
+
+.Logo {
+    margin-top: 7px;
+}
+
+.Logo svg{
+    display: block;
+    height: 75px;
+    fill: white;
+}
