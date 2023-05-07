@@ -10,7 +10,6 @@ import TextBox from './text/TextBox';
 import Projects from './Projects';
 
 import HorizontalLine from './utils/HorizontalLine';
-import Links from './Links';
 
 
 export default function App() {

@@ -9,20 +9,20 @@ import Project from "./Project";
 
 
 function Projects() {
-    let [repos, getRepos] = useState([])
+    let [repos, setRepos] = useState([])
 
     // Non-authed GET request to GH for my Public Repo Info 
     useEffect(() => {
-        async function fecthData() {
+        async function fetchData() {
             const octokit = new Octokit({userAgent: 'test/v0.0.1'});
             const response = await octokit.request(
                 'GET /users/RexGreenway/repos'
             )
             const repos = await response.data
-            getRepos(repos);
+            setRepos(repos);
         }
 
-        fecthData()
+        fetchData()
         
     }, []);
 
