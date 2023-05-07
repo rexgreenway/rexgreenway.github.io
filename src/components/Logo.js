@@ -1,27 +1,14 @@
-import styles from './Logo.module.css'
-import logo from '../assets/R-Logo.svg'
+import styles from './Logo.module.css';
 
-function Logo({ size }) {
-    // Logo can have its size defined
-    const size_map = {
-        'small': 100,
-        'medium': 200,
-        'large': 400
-    };
+import {ReactComponent as RexLogo} from '../assets/R-Logo.svg';
 
-    if ( !(size in size_map) ) {
-        size = 'small';
-    };
 
+function Logo() {
     return (
-        <img
-            className={styles.Logo}
-            src={logo}
-            alt='logo'
-            width={size_map[size]}
-            height={size_map[size]}
-        />
-    );
+        <div className={styles.Logo}>
+            <RexLogo />
+        </div>
+    )
 };
 
 export default Logo;

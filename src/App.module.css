@@ -1,4 +1,22 @@
 .App {
-    text-align: center;
-    margin: 10%;
+    height: inherit;
+    width: inherit;
+    
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.Split {
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 600px) {
+    .Split{
+        flex-direction: column;
+    }
 }

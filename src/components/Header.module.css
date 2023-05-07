@@ -2,7 +2,16 @@
 .Header {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    padding: 10px;
+/* Wrap Title for Mobile View */
+@media only screen and (max-width: 600px) {
+    .Header{
+        /* flex-direction: column; */
+        gap: 10px;
+
+        /* width: 50%; */
+    }
 }

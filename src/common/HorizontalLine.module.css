@@ -1,0 +1,9 @@
+.HorizontalLine {
+    display: block;
+    border: 1px solid white;
+}
+
+.Spacer {
+    display: block;
+    height: 50px;
+}

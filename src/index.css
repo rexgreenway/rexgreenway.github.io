@@ -9,8 +9,23 @@
 * Dark Mode Switches?
 */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;;
-  background-color: rgb(53, 53, 53);
+    margin: 0;
+
+    background-color:  #121212;
+
+    font: 2em 'Bebas Neue', cursive;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+p, h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+#root {
+    height: 100vh;
 }
