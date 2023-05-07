@@ -28,7 +28,7 @@ function Projects() {
 
     let projects = repos.map(r => {
         return (
-            <Project name={r.name} description={r.description}/>
+            <Project name={r.name} description={r.description} link={r.html_url}/>
         )
     });
 

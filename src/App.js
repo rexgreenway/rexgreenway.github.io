@@ -5,55 +5,40 @@ import styles from './App.module.css';
 import MainBody from './MainBody';
 import Header from './components/Header'
 import Title from './text/Title';
-import NavBar from './components/NavBar';
 import TextBox from './text/TextBox';
 import Projects from './Projects';
 
 import { HorizontalLine } from './common/HorizontalLine';
+import Links from './Links';
 
 
 export default function App() {
     return (
         <div className={styles.App}>
-            {/* Headers should have 2 child elements: Title + Menu */}
-            {/* Should I hard code Header? */}
             <Header>
-                {/* Start of Header */}
                 <Title />
-
-                {/* End of Header! */}
-                {/* Navigation Menu - wraps around for mobile (Header Specific media query) */}
                 {/* <NavBar /> */}
             </Header>
 
             <MainBody>
-                {/* SECTION: Location, Role / Title  */}
                 <div>
                     <h4>
-                        <PlaceIcon />
-                        London, UK
+                        <PlaceIcon />   London, UK
                     </h4>
                     <h2>Software Engineer</h2>
                 </div>
                 
                 <HorizontalLine />
-                
-                {/* Different Font!! */}
+
                 <TextBox>
-                    I am a sofware developer from London -
-                    I specialise in Python, JavaScript, and various other things.
+                    Specialising in AI Software Development, I have a passion for object oriented elegant programming solutions.
+                    {/* Primarily working in Python I have experience with K8s, GCP, as well as frameworks such as Flask, ReactJS. */}
                 </TextBox>
 
                 <HorizontalLine />
 
-                <div>
-                    LINKS
-                </div>
+                <Links />
             </MainBody>
-
-            {/* <div className={styles.Split}>    
-                <Projects />
-            </div> */}
 
             <div>
                 <HorizontalLine />
@@ -61,11 +46,10 @@ export default function App() {
                 <Projects />
             </div>
 
-            {/* <HorizontalLine />
             <div>
-                FOOTER
-            </div> */}
-
+                <HorizontalLine />
+                <TextBox> {'->'} Thank you for visiting my website!</TextBox>
+            </div>
         </div>
     );
 };

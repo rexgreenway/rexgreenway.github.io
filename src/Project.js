@@ -1,16 +1,18 @@
 
 import styles from './Project.module.css'
 
-import Container from "./Container";
+import TextBox from './text/TextBox';
 import { HorizontalLine } from "./common/HorizontalLine";
 
-function Project({ name, description}) {
+function Project({ name, description, link}) {
     return (
-        <Container className={styles.Project}>
-            <h3>{name}</h3>
-            <HorizontalLine />
-            <p>{description}</p>
-        </Container>
+        <a href={link}>
+            <div className={styles.Project}>
+                <h4>{name}</h4>
+                <HorizontalLine />
+                <TextBox>{description}</TextBox>
+            </div>
+        </a>
     )
 }
 

@@ -5,13 +5,3 @@
     align-items: center;
     justify-content: space-between;
 }
-
-/* Wrap Title for Mobile View */
-@media only screen and (max-width: 600px) {
-    .Header{
-        /* flex-direction: column; */
-        gap: 10px;
-
-        /* width: 50%; */
-    }
-}

@@ -7,13 +7,4 @@
     width: 60%;
     align-self: center;
 
-    /* flex-basis: 0; */
-    /* flex-grow: 4; */
-}
-
-/* Better Spacing for NavBar on Mobile */
-@media only screen and (max-width: 600px) {
-    .MainBody {
-        max-width: 95%;
-    }
 }

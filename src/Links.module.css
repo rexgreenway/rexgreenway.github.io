@@ -1,0 +1,10 @@
+
+.Links {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.Link {
+    color: white;
+}
