@@ -37,11 +37,7 @@ export default function App() {
 
             </MainBody>
 
-            <div>
-                <HorizontalLine />
-                <h3>Projects</h3>
-                <Projects />
-            </div>
+            <Projects />
 
             <div>
                 <HorizontalLine />

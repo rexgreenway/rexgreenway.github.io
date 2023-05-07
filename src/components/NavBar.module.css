@@ -17,6 +17,8 @@
     color: #fff;
 
     background-color: rgb(255, 255, 255, 0.05);
+
+    box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.2)
 }
 
 /* Better Spacing for NavBar on Mobile */

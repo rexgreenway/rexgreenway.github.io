@@ -5,6 +5,7 @@ import { Octokit } from "octokit";
 import styles from './Projects.module.css'
 
 import Container from "./Container";
+import HorizontalLine from "./utils/HorizontalLine";
 import Project from "./Project";
 
 
@@ -28,12 +29,19 @@ function Projects() {
 
     let projects = repos.map(r => {
         return (
-            <Project name={r.name} description={r.description} link={r.html_url}/>
+            <Project
+                name={r.name}
+                description={r.description}
+                link={r.html_url}
+                language={r.language}
+            />
         )
     });
 
     return (
         <Container className={styles.Projects}>
+            <HorizontalLine />
+            <h3>Projects</h3>
             {projects}
         </Container>
     )
