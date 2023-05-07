@@ -2,7 +2,7 @@
 import styles from './Project.module.css'
 
 import TextBox from './text/TextBox';
-import { HorizontalLine } from "./common/HorizontalLine";
+import HorizontalLine from "./utils/HorizontalLine";
 
 function Project({ name, description, link}) {
     return (

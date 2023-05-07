@@ -5,10 +5,11 @@ import styles from './App.module.css';
 import MainBody from './MainBody';
 import Header from './components/Header'
 import Title from './text/Title';
+import NavBar from './components/NavBar'
 import TextBox from './text/TextBox';
 import Projects from './Projects';
 
-import { HorizontalLine } from './common/HorizontalLine';
+import HorizontalLine from './utils/HorizontalLine';
 import Links from './Links';
 
 
@@ -17,7 +18,7 @@ export default function App() {
         <div className={styles.App}>
             <Header>
                 <Title />
-                {/* <NavBar /> */}
+                <NavBar />
             </Header>
 
             <MainBody>

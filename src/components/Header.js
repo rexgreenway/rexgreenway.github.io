@@ -2,7 +2,7 @@
 import styles from './Header.module.css'
 
 import Container from '../Container'
-import { HorizontalLine } from '../common/HorizontalLine'
+import HorizontalLine from '../utils/HorizontalLine'
 
 
 function Header({ children }) {
