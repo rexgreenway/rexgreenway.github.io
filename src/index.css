@@ -17,9 +17,12 @@ body {
 
     background-color:  #121212;
 
-    font: 2em 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', cursive;
     color: #fff;
     letter-spacing: 2px;
+
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 p, h1, h2, h3, h4, h5 {

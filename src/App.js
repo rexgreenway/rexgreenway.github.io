@@ -2,54 +2,61 @@ import PlaceIcon from '@mui/icons-material/Place';
 
 import styles from './App.module.css';
 
-import MainBody from './MainBody';
-import Header from './components/Header'
-import Title from './text/Title';
+import Layout from './layouts/Layout'
+import MainBody from './containers/MainBody';
 import TextBox from './text/TextBox';
 import Projects from './Projects';
 
-import { HorizontalLine } from './common/HorizontalLine';
-import Links from './Links';
+import HorizontalLine from './utils/HorizontalLine';
+import SplitPane from './containers/SplitPane';
+import Spotlight from './Spotlight';
 
 
 export default function App() {
+
+    const left = (
+        <MainBody>
+            <div>
+                <h2>
+                    <PlaceIcon />   London, UK
+                </h2>
+                <h1>Software Engineer</h1>
+            </div>
+            
+            <HorizontalLine />
+
+            <TextBox>
+                Specialising in AI Software Development,
+                I have a passion for object oriented elegant
+                programming solutions.
+            </TextBox>
+
+            <HorizontalLine />
+
+            <h3>
+                PYTHON -
+                JAVASCRIPT -
+                GCP -
+                K8S -
+                DOCKER -
+                & MORE
+            </h3>
+
+        </MainBody>
+    )
+
+    const right = (
+        <Spotlight />
+    )
+    
     return (
-        <div className={styles.App}>
-            <Header>
-                <Title />
-                {/* <NavBar /> */}
-            </Header>
-
-            <MainBody>
-                <div>
-                    <h4>
-                        <PlaceIcon />   London, UK
-                    </h4>
-                    <h2>Software Engineer</h2>
-                </div>
-                
-                <HorizontalLine />
-
-                <TextBox>
-                    Specialising in AI Software Development, I have a passion for object oriented elegant programming solutions.
-                    {/* Primarily working in Python I have experience with K8s, GCP, as well as frameworks such as Flask, ReactJS. */}
-                </TextBox>
-
-                <HorizontalLine />
-
-                <Links />
-            </MainBody>
-
-            <div>
-                <HorizontalLine />
-                <h3>Projects</h3>
-                <Projects />
-            </div>
-
-            <div>
-                <HorizontalLine />
-                <TextBox> {'->'} Thank you for visiting my website!</TextBox>
-            </div>
-        </div>
+        <Layout className={styles.App}>
+            <SplitPane
+                left={left}
+                right={right}
+            />
+            <HorizontalLine />
+            <Projects />
+        </Layout>
     );
 };

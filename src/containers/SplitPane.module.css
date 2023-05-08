@@ -1,15 +1,22 @@
 
-.Header {
+.SplitPane {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
 }
 
+.Left, .Right {
+    width: 50%;
+}
+
+
 @media only screen and (max-width: 800px) {
-    .Header {
+    .SplitPane {
         flex-direction: column;
-        align-items: flex-start;
+    }
+
+    .Left, .Right {
+        width: 100%;
     }
 }

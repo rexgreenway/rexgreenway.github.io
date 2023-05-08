@@ -1,0 +1,10 @@
+
+.Tag {
+    padding: 4px 6px 4px 6px;
+    border-radius: 30px;
+    align-self: center;
+}
+
+.Tag p {
+    font-size: 12px;
+}
