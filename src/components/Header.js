@@ -1,7 +1,7 @@
 
 import styles from './Header.module.css'
 
-import Container from '../Container'
+import Container from '../containers/Container'
 import HorizontalLine from '../utils/HorizontalLine'
 
 
