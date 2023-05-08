@@ -4,8 +4,7 @@ import { Octokit } from "octokit";
 
 import styles from './Projects.module.css'
 
-import Container from "./Container";
-import HorizontalLine from "./utils/HorizontalLine";
+import Container from "./containers/Container";
 import Project from "./Project";
 
 
@@ -30,6 +29,7 @@ function Projects() {
     let projects = repos.map(r => {
         return (
             <Project
+                key={r.id}  // ID Field needed for React rendering so that components are treated as unique
                 name={r.name}
                 description={r.description}
                 link={r.html_url}
@@ -40,8 +40,7 @@ function Projects() {
 
     return (
         <Container className={styles.Projects}>
-            <HorizontalLine />
-            <h3>Projects</h3>
+            <h1>Projects</h1>
             {projects}
         </Container>
     )

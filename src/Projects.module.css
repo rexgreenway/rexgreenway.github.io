@@ -7,3 +7,8 @@
     flex-direction: column;
     gap: 20px;
 }
+
+.Projects a {
+    color: inherit;
+    text-decoration: none;
+}
