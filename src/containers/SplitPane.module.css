@@ -1,0 +1,22 @@
+
+.SplitPane {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.Left, .Right {
+    width: 50%;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .SplitPane {
+        flex-direction: column;
+    }
+
+    .Left, .Right {
+        width: 100%;
+    }
+}

@@ -2,9 +2,6 @@
 .MainBody {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 
-    max-width: 80%;
     align-self: center;
-
 }
