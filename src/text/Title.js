@@ -8,7 +8,7 @@ export default function Title() {
     return (
         <div className={styles.Title}>
             <Logo />
-            <h3>Rex Greenway</h3>
+            <h1>Rex Greenway</h1>
         </div>
     );
 };

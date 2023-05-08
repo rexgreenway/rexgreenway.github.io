@@ -3,15 +3,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 
-    width: 45%;
+    min-width: 60%;
 }
 
 .Button {
     border: none;
-    border-radius: 15px;
-
-    padding: 5px 15px 5px 15px;
+    
+    padding: 1px 10px 1px 10px;
+    border-radius: 8px;
     
     font: 24px 'Bebas Neue', cursive;
     color: #fff;
@@ -19,11 +20,4 @@
     background-color: rgb(255, 255, 255, 0.05);
 
     box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.2)
-}
-
-/* Better Spacing for NavBar on Mobile */
-@media only screen and (max-width: 600px) {
-    .NavBar {
-        width: 95%;
-    }
 }
