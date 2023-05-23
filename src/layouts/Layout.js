@@ -3,10 +3,9 @@ import styles from './Layout.module.css'
 
 import Header from "../components/Header";
 // import NavBar from "../components/NavBar";
-import TextBox from "../text/TextBox";
 import Title from "../text/Title";
-import HorizontalLine from "../utils/HorizontalLine";
 import Links from '../Links';
+import Footer from '../components/Footer';
 
 
 export default function Layout({ className, children }) {
@@ -23,11 +22,7 @@ export default function Layout({ className, children }) {
             
             { children }
 
-            {/* Make a Footer */}
-            <div>
-                <HorizontalLine />
-                <TextBox> {'->'} Thank you for visiting my website!</TextBox>
-            </div>
+            <Footer />
         </div>
     );
 };
