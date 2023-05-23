@@ -9,11 +9,8 @@ import Footer from '../components/Footer';
 
 
 export default function Layout({ className, children }) {
-    
-    const classes = className + ' ' + styles.Layout
-    
     return (
-        <div className={classes}>
+        <div className={styles.Layout}>
             <Header>
                 <Title />
                 <Links />

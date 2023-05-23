@@ -2,7 +2,6 @@
 import styles from './Header.module.css'
 
 import Container from '../containers/Container'
-import HorizontalLine from '../utils/HorizontalLine'
 
 
 function Header({ children }) {
@@ -11,7 +10,6 @@ function Header({ children }) {
             <Container className={styles.Header}>
                 { children }
             </Container>
-            <HorizontalLine />
         </div>
     )
 }
