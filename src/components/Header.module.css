@@ -7,6 +7,16 @@
     gap: 10px;
 }
 
+.Title {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
 @media only screen and (max-width: 800px) {
     .Header {
         flex-direction: column;

@@ -4,7 +4,6 @@ import Lattice from './assets/PolyLatLib-Header.png'
 import styles from './Spotlight.module.css'
 
 import Card from './containers/Card';
-import TextBox from './text/TextBox';
 import HorizontalLine from './utils/HorizontalLine';
 
 
@@ -17,10 +16,10 @@ export default function Spotlight() {
             />
             <h2>PolyLatLib</h2>
             <HorizontalLine />
-            <TextBox>
+            <p>
                 A Python library for the generation and manipulation
                 of Lattices (Please See Project Link Below)
-            </TextBox>
+            </p>
         </Card>
     )
 }

@@ -1,6 +1,5 @@
 
 import styles from './Tag.module.css';
-import TextBox from './TextBox';
 
 
 export default function Tag({ name }) {
@@ -23,7 +22,7 @@ export default function Tag({ name }) {
 
     return (
         <div className={styles.Tag} style={{backgroundColor: tag_colour + '90'}}>
-            <TextBox>{name}</TextBox>
+            <p>{name}</p>
         </div>
     );
 };

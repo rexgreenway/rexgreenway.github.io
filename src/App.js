@@ -1,10 +1,7 @@
 import PlaceIcon from '@mui/icons-material/Place';
 
-import styles from './App.module.css';
-
 import Layout from './layouts/Layout'
 import MainBody from './containers/MainBody';
-import TextBox from './text/TextBox';
 import Projects from './Projects';
 
 import HorizontalLine from './utils/HorizontalLine';
@@ -18,18 +15,18 @@ export default function App() {
         <MainBody>
             <div>
                 <h2>
-                    <PlaceIcon />   London, UK
+                    <PlaceIcon /> London, UK
                 </h2>
                 <h1>Software Engineer</h1>
             </div>
             
             <HorizontalLine />
 
-            <TextBox>
+            <p>
                 Specialising in AI Software Development,
                 I have a passion for object oriented elegant
                 programming solutions.
-            </TextBox>
+            </p>
 
             <HorizontalLine />
 
@@ -50,13 +47,16 @@ export default function App() {
     )
     
     return (
-        <Layout className={styles.App}>
+        <Layout>
+            <HorizontalLine />
             <SplitPane
                 left={left}
                 right={right}
             />
             <HorizontalLine />
+            <h1>Projects</h1>
             <Projects />
+            <HorizontalLine />
         </Layout>
     );
 };
