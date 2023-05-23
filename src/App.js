@@ -1,7 +1,5 @@
 import PlaceIcon from '@mui/icons-material/Place';
 
-import styles from './App.module.css';
-
 import Layout from './layouts/Layout'
 import MainBody from './containers/MainBody';
 import TextBox from './text/TextBox';
@@ -50,13 +48,16 @@ export default function App() {
     )
     
     return (
-        <Layout className={styles.App}>
+        <Layout>
+            <HorizontalLine />
             <SplitPane
                 left={left}
                 right={right}
             />
             <HorizontalLine />
+            <h1>Projects</h1>
             <Projects />
+            <HorizontalLine />
         </Layout>
     );
 };
