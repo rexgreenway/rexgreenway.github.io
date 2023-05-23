@@ -15,7 +15,7 @@ export default function App() {
         <MainBody>
             <div>
                 <h2>
-                    <PlaceIcon />   London, UK
+                    <PlaceIcon /> London, UK
                 </h2>
                 <h1>Software Engineer</h1>
             </div>
