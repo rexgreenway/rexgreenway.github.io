@@ -11,7 +11,10 @@ function Project({ name, description, link, language}) {
     return (
         <Card className={styles.Project}>
             <a href={link}>
-                <ProjectTitle text={name} tag={language} />
+                <ProjectTitle
+                    text={name}
+                    tag={language}
+                />
                 <HorizontalLine />
                 <TextBox>{description}</TextBox>
             </a>

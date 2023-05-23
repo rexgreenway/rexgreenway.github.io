@@ -4,7 +4,6 @@ import { Octokit } from "octokit";
 
 import styles from './Projects.module.css'
 
-import Container from "./containers/Container";
 import Project from "./Project";
 
 
@@ -29,7 +28,7 @@ function Projects() {
     let projects = repos.map(r => {
         return (
             <Project
-                key={r.id}  // ID Field needed for React rendering so that components are treated as unique
+                key={r.id}  // ID needed for React rendering so components are unique
                 name={r.name}
                 description={r.description}
                 link={r.html_url}
@@ -39,10 +38,17 @@ function Projects() {
     });
 
     return (
-        <Container className={styles.Projects}>
-            <h1>Projects</h1>
+        <div className={styles.Projects}>
             {projects}
-        </Container>
+            <Project
+                key="inf"
+                name="Coming Soon!"
+                description="Keep a look-out for more projects coming soon..."
+                link="https://github.com/RexGreenway"
+                language="Any"
+            />
+        </div>
+
     )
 }
 
