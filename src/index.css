@@ -11,6 +11,7 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
 
 body {
     margin: 0;
@@ -27,4 +28,8 @@ body {
 
 p, h1, h2, h3, h4, h5 {
     margin: 0;
+}
+
+p {
+    font: 14px 'Raleway', sans-serif;
 }

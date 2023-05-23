@@ -2,9 +2,7 @@
 import styles from './Project.module.css'
 
 import Card from './containers/Card'
-
 import ProjectTitle from './text/ProjectTitle';
-import TextBox from './text/TextBox';
 import HorizontalLine from "./utils/HorizontalLine";
 
 function Project({ name, description, link, language}) {
@@ -16,7 +14,7 @@ function Project({ name, description, link, language}) {
                     tag={language}
                 />
                 <HorizontalLine />
-                <TextBox>{description}</TextBox>
+                <p>{description}</p>
             </a>
         </Card>
     )

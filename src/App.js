@@ -2,7 +2,6 @@ import PlaceIcon from '@mui/icons-material/Place';
 
 import Layout from './layouts/Layout'
 import MainBody from './containers/MainBody';
-import TextBox from './text/TextBox';
 import Projects from './Projects';
 
 import HorizontalLine from './utils/HorizontalLine';
@@ -23,11 +22,11 @@ export default function App() {
             
             <HorizontalLine />
 
-            <TextBox>
+            <p>
                 Specialising in AI Software Development,
                 I have a passion for object oriented elegant
                 programming solutions.
-            </TextBox>
+            </p>
 
             <HorizontalLine />
 
