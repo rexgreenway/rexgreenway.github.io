@@ -1,4 +1,11 @@
 
 .Project {
     min-height: 250px;
+    transition: ease-in 0.2s;
 }
+
+.Project:hover{
+    transition: ease-in 0.1s;
+    transform: scale(1.03);
+}
+    
