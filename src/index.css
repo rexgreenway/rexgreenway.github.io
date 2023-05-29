@@ -14,16 +14,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
 
 body {
-    margin: 0;
-
+    /* To be replaced with the CSS Painting API */
     background-color:  #121212;
 
     font-family: 'Bebas Neue', cursive;
     color: #fff;
     letter-spacing: 2px;
-
-    margin-left: 10%;
-    margin-right: 10%;
+    
+    margin: 20px 10% 20px 10%
 }
 
 p, h1, h2, h3, h4, h5 {

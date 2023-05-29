@@ -2,39 +2,37 @@ import { useState, useEffect } from "react";
 
 import { Octokit } from "octokit";
 
-import styles from './Projects.module.css'
+import styles from "./Projects.module.css";
 
 import Project from "./Project";
 
-
 function Projects() {
-    let [repos, setRepos] = useState([])
+    let [repos, setRepos] = useState([]);
 
-    // Non-authed GET request to GH for my Public Repo Info 
+    // Non-authed GET request to GH for my Public Repo Info
     useEffect(() => {
         async function fetchData() {
-            const octokit = new Octokit({userAgent: 'test/v0.0.1'});
+            const octokit = new Octokit();
             const response = await octokit.request(
-                'GET /users/RexGreenway/repos'
-            )
-            const repos = await response.data
+                "GET /users/RexGreenway/repos?sort=pushed"
+            );
+            const repos = await response.data;
             setRepos(repos);
         }
 
-        fetchData()
-        
+        fetchData();
     }, []);
 
-    let projects = repos.map(r => {
+    let projects = repos.map((r) => {
         return (
             <Project
-                key={r.id}  // ID needed for React rendering so components are unique
+                key={r.id} // ID needed for React rendering so components are unique
                 name={r.name}
                 description={r.description}
                 link={r.html_url}
                 language={r.language}
             />
-        )
+        );
     });
 
     return (
@@ -48,8 +46,7 @@ function Projects() {
                 language="Any"
             />
         </div>
-
-    )
+    );
 }
 
-export default Projects
+export default Projects;

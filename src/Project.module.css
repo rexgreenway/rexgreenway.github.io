@@ -1,4 +1,28 @@
 
 .Project {
     min-height: 250px;
+    transition: ease-in 0.2s;
+
+    display: flex;
+    flex-direction: column;
 }
+
+.ProjectContent {
+    flex-grow: 2;
+}
+
+.ProjectLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+
+    align-items: center;
+}
+
+
+.Project:hover{
+    transition: ease-in 0.1s;
+    transform: scale(1.03);
+}
+    
