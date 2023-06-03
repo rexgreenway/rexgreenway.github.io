@@ -1,0 +1,7 @@
+.Logo {
+    height: 40px;
+}
+
+.Logo path {
+    fill: white !important;
+}
