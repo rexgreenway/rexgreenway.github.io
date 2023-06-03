@@ -36,16 +36,19 @@ function Projects() {
     });
 
     return (
-        <div className={styles.Projects}>
-            {projects}
-            <Project
-                key="inf"
-                name="Coming Soon!"
-                description="Keep a look-out for more projects coming soon..."
-                link="https://github.com/RexGreenway"
-                language="Any"
-            />
-        </div>
+        <>
+            <h1>Projects</h1>
+            <div className={styles.Projects}>
+                {projects}
+                <Project
+                    key="inf"
+                    name="Coming Soon!"
+                    description="Keep a look-out for more projects coming soon..."
+                    link="https://github.com/RexGreenway"
+                    language="Any"
+                />
+            </div>
+        </>
     );
 }
 

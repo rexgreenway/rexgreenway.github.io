@@ -10,7 +10,6 @@
     width: 50%;
 }
 
-
 @media only screen and (max-width: 800px) {
     .SplitPane {
         flex-direction: column;

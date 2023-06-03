@@ -1,0 +1,21 @@
+.About {
+    margin-bottom: 20px;
+}
+
+.Logo {
+    height: 40px;
+}
+
+.Logo path {
+    fill: white !important;
+}
+
+.EdEx {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto 3fr;
+}
+
+.EdEx h3 {
+    justify-self: end;
+}
