@@ -1,14 +1,6 @@
+import styles from "./Container.module.css";
 
-import styles from './Container.module.css';
-
-
+// Containers accept passthrough classes
 export default function Container({ className, children }) {
-    // Containers accept passthrough classes
-    const classes = className + ' ' + styles.Container;
-    
-    return (
-        <div className={classes}>
-            { children }
-        </div>
-    );
-};
+    return <div className={`${className} ${styles.Container}`}>{children}</div>;
+}
