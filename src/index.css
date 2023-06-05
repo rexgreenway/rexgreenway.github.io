@@ -18,7 +18,7 @@ body {
     background-color:  #121212;
 
     font-family: 'Bebas Neue', cursive;
-    color: #fff;
+    color: #ddd;
     letter-spacing: 2px;
     
     margin: 20px 10% 20px 10%
@@ -29,5 +29,5 @@ p, h1, h2, h3, h4, h5 {
 }
 
 p {
-    font: 14px 'Raleway', sans-serif;
+    font: 15px 'Raleway', sans-serif;
 }
