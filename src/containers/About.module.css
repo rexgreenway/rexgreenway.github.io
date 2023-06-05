@@ -1,21 +1,26 @@
 .About {
     margin-bottom: 20px;
+
+    font-size: 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.Logo {
-    height: 40px;
+.Main {
+    flex-grow: 2;
+    flex-basis: 0;
 }
 
-.Logo path {
-    fill: white !important;
+.ExEd {
+    text-align: end;
 }
 
-.EdEx {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: auto 3fr;
-}
-
-.EdEx h3 {
-    justify-self: end;
+@media only screen and (max-width: 900px) {
+    .ExEd {
+        display: none;
+    }
 }

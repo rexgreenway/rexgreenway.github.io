@@ -16,7 +16,7 @@
 }
 
 .Content {
-    animation: scroll 15s linear infinite;
+    animation: scroll 30s linear infinite;
     width: 100%;
     display: flex;
     flex-direction: row;
