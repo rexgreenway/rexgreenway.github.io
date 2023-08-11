@@ -1,0 +1,28 @@
+.Links {
+    color: white;
+    text-decoration: none;
+
+    /* Element Centering */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    width: max-content;
+}
+
+.ExternalLink {
+    /* Circle Border */
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+/* HOVER -> Invert/Animate */
+.ExternalLink:hover {
+    background-color: black;
+    filter: invert(1);
+    transition: linear 0.1s;
+}
