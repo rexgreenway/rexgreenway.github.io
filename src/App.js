@@ -1,16 +1,18 @@
-import Layout from "./layouts/Layout";
-import Projects from "./Projects";
-import HorizontalLine from "./utils/HorizontalLine";
-import About from "./containers/About";
+import { Outlet } from "react-router-dom";
+
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+import styles from "./App.module.css";
 
 export default function App() {
     return (
-        <Layout>
-            <HorizontalLine />
-            <About />
-            <HorizontalLine />
-            <Projects />
-            <HorizontalLine />
-        </Layout>
+        <div className={styles.Layout}>
+            <Header />
+            <div id="content">
+                <Outlet />
+            </div>
+            <Footer />
+        </div>
     );
 }

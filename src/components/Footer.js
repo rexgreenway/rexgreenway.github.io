@@ -1,10 +1,14 @@
-
 import Container from "../containers/Container";
+import Links from "../Links";
+import HorizontalLine from "./HorizontalLine";
 
 export default function Footer() {
     return (
-        <Container>
-            <p> {'->'} Thank you for visiting my website!</p>
-        </Container>
-    )
+        <div id="footer">
+            <HorizontalLine />
+            <Container>
+                <Links />
+            </Container>
+        </div>
+    );
 }

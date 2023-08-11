@@ -1,0 +1,50 @@
+
+.Project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    min-height: 250px;
+    min-width: 200px;
+    max-width: 400px;
+    transition: ease-in 0.2s;
+}
+
+.Project:hover{
+    transition: ease-in 0.1s;
+    transform: scale(1.03);
+}
+
+.Links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+
+.Tag {
+    padding: 4px 6px 4px 6px;
+    border-radius: 30px;
+    align-self: center;
+}
+
+.Tag p {
+    font-size: 12px;
+}
+
+
+.ProjectTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    align-items: center;
+}
+
+.ProjectTitle h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

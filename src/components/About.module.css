@@ -14,13 +14,3 @@
     flex-grow: 2;
     flex-basis: 0;
 }
-
-.ExEd {
-    text-align: end;
-}
-
-@media only screen and (max-width: 900px) {
-    .ExEd {
-        display: none;
-    }
-}

@@ -1,16 +1,58 @@
 
 .Header {
+    column-gap: 20px;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content min-content 1fr;
+}
+
+.Logo {
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    /* SVG Styling */
+    display: block;
+    fill: white;
+    height: 75px;
+}
+  
+.Title {
+    align-self: center;
+}
+  
+.NavBar {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
     gap: 20px;
 }
 
-.Title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
+.NavBar a {
+    color: #ddd;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.NavBar a.active {
+    text-decoration: underline;
+}
+
+
+/* Float NavBar Down for Mobile View */
+@media only screen and (max-width: 380px) {
+    .Header {
+        row-gap: 20px;
+    }
+
+    .Title {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .NavBar {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        justify-content: space-around;
+    }
 }

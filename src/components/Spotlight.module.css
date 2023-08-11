@@ -1,0 +1,12 @@
+
+.Spotlight {
+    max-width: min(600px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
