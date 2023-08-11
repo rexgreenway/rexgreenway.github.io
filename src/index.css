@@ -9,7 +9,6 @@
 * Dark Mode Switches?
 */
 
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
 
@@ -17,7 +16,7 @@ body {
     /* To be replaced with the CSS Painting API */
     background-color:  #121212;
 
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', monospace;
     color: #ddd;
     letter-spacing: 2px;
     
@@ -30,4 +29,10 @@ p, h1, h2, h3, h4, h5 {
 
 p {
     font: 15px 'Raleway', sans-serif;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
