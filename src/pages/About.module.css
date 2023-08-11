@@ -1,0 +1,11 @@
+.AboutPage {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.AboutSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
