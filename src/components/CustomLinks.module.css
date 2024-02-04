@@ -26,3 +26,8 @@
     filter: invert(1);
     transition: linear 0.1s;
 }
+
+.Button {
+    background: none;
+    font: inherit;
+}
