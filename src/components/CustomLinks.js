@@ -6,9 +6,9 @@ import styles from "./CustomLinks.module.css";
 
 export function PagesLink({ to, children }) {
   return (
-    <Link className={`${styles.Links} ${styles.ExternalLink}`} to={to}>
+    <a className={`${styles.Links} ${styles.ExternalLink}`} href={to}>
       {children}
-    </Link>
+    </a>
   );
 }
 

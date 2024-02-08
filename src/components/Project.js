@@ -71,7 +71,8 @@ export default function Project({
       </div>
 
       <div className={styles.Links}>
-        {has_pages && (
+        {/* Could instead utilise 2 routers a hash router and a not hash router? */}
+        {has_pages && name !== "rexgreenway.github.io" && (
           <PagesLink to={`https://rexgreenway.github.io/${name}/`}>
             Website
           </PagesLink>
