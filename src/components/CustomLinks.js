@@ -4,6 +4,14 @@ import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRound
 
 import styles from "./CustomLinks.module.css";
 
+export function PagesLink({ to, children }) {
+  return (
+    <Link className={`${styles.Links} ${styles.ExternalLink}`} to={to}>
+      {children}
+    </Link>
+  );
+}
+
 export function ExternalLink({ to, children }) {
   return (
     <Link
