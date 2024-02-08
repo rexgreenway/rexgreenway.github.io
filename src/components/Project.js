@@ -1,6 +1,6 @@
 import Card from "../containers/Card";
 import HorizontalLine from "./HorizontalLine";
-import { ExternalLink } from "./CustomLinks";
+import { ExternalLink, PagesLink } from "./CustomLinks";
 
 import styles from "./Project.module.css";
 
@@ -59,6 +59,7 @@ export default function Project({
   html_url,
   language,
   topics,
+  has_pages,
 }) {
   return (
     <Card className={styles.Project}>
@@ -70,6 +71,11 @@ export default function Project({
       </div>
 
       <div className={styles.Links}>
+        {has_pages && (
+          <PagesLink to={`https://rexgreenway.github.io/${name}/`}>
+            Website
+          </PagesLink>
+        )}
         <ExternalLink to={html_url}>GitHub</ExternalLink>
       </div>
     </Card>
