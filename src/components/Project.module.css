@@ -5,7 +5,7 @@
     justify-content: space-between;
     
     min-height: 250px;
-    min-width: 200px;
+    min-width: max(300px, inherit);
     max-width: 400px;
     transition: ease-in 0.2s;
 }
@@ -21,30 +21,32 @@
     gap: 5px;
 }
 
+.Tags {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
 
 .Tag {
     padding: 4px 6px 4px 6px;
     border-radius: 30px;
-    align-self: center;
 }
 
 .Tag p {
+    text-overflow: ellipsis;
     font-size: 12px;
+    text-wrap: nowrap;
 }
-
 
 .ProjectTitle {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    align-items: center;
-}
-
-.ProjectTitle h2 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.ProjectDescription {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
