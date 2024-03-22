@@ -11,33 +11,31 @@ import { CentredFlex } from "../containers/CardContainers";
 import SectionTitle from "../components/SectionTitle";
 
 export default function Home() {
-    let [projects, setProjects] = useState([]);
+  let [projects, setProjects] = useState([]);
 
-    // Fetch First N Projects
-    useEffect(() => {
-        fetchProjects(3).then((result) => {
-            setProjects(
-                result.map((repo) => <Project key={repo.id} {...repo} />)
-            );
-        });
-    }, []);
+  // Fetch First N Projects
+  useEffect(() => {
+    fetchProjects(3).then((result) => {
+      setProjects(result.map((repo) => <Project key={repo.id} {...repo} />));
+    });
+  }, []);
 
-    return (
-        <>
-            {/* INTRODUCTION */}
-            <SplitPane left={<About />} right={<></>} />
+  return (
+    <>
+      {/* INTRODUCTION */}
+      <SplitPane left={<About />} right={<></>} />
 
-            <HorizontalLine />
+      <HorizontalLine />
 
-            {/* SPOTLIGHT */}
-            <h1>Featured Project</h1>
-            <Spotlight />
+      {/* SPOTLIGHT */}
+      <h1>Featured Project</h1>
+      <Spotlight />
 
-            <HorizontalLine />
+      <HorizontalLine />
 
-            {/* PROJECT SNAPSHOT */}
-            <SectionTitle title="Projects" to="projects" />
-            <CentredFlex>{projects}</CentredFlex>
-        </>
-    );
+      {/* PROJECT SNAPSHOT */}
+      <SectionTitle title="Projects" to="projects" />
+      <CentredFlex>{projects}</CentredFlex>
+    </>
+  );
 }
