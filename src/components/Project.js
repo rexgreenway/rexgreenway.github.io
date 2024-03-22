@@ -16,7 +16,9 @@ function Tag({ name, color }) {
 
 function Language({ name }) {
   // To lower case to ignore any input passed capitalisation
-  const name_lower = name === undefined ? "no-tag" : name.toLowerCase();
+  if ((name === undefined) | (name === null)) {
+    name = "No Language";
+  }
 
   const colour_map = {
     python: "#4B8BBE",
@@ -26,7 +28,7 @@ function Language({ name }) {
     go: "#29BEB0",
   };
 
-  const lang_colour = colour_map[name_lower] || "#FF8300";
+  const lang_colour = colour_map[name.toLowerCase()] || "#FF8300";
 
   return <Tag name={name} color={lang_colour} />;
 }
