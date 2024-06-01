@@ -5,8 +5,6 @@
     justify-content: space-between;
     
     min-height: 250px;
-    min-width: max(300px, inherit);
-    max-width: 400px;
     transition: ease-in 0.2s;
 }
 

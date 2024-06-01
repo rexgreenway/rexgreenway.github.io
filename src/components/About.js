@@ -5,7 +5,7 @@ import styles from "./About.module.css";
 import Container from "../containers/Container";
 import { PDFLink } from "./CustomLinks";
 
-import PDF from "../documents/2024-02-04-CV.pdf";
+import PDF from "../documents/2024-06-01-CV.pdf";
 
 function About() {
   return (
