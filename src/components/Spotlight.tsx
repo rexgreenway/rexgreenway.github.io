@@ -14,9 +14,10 @@ export default function Spotlight() {
         <HorizontalLine />
         <p>A Python library for the generation and manipulation of Lattices.</p>
         <div className={styles.Links}>
-          <ExternalLink to="https://github.com/RexGreenway/PolyLatLib">
-            GitHub
-          </ExternalLink>
+          <ExternalLink
+            to="https://github.com/RexGreenway/PolyLatLib"
+            text="GitHub"
+          />
         </div>
       </CardWithImage>
     </Container>

@@ -4,7 +4,7 @@ import { ExternalLink, PagesLink } from "./CustomLinks";
 
 import styles from "./Project.module.css";
 
-function Tag({ name, color }) {
+function Tag({ name, color }: { name: string; color?: string }) {
   const tag_color = color ? color : "#333333";
 
   return (
@@ -14,13 +14,13 @@ function Tag({ name, color }) {
   );
 }
 
-function Language({ name }) {
+function Language({ name }: { name: string | null }) {
   // To lower case to ignore any input passed capitalisation
-  if ((name === undefined) | (name === null)) {
+  if (name === undefined || name === null) {
     name = "No Language";
   }
 
-  const colour_map = {
+  const colour_map: { [key: string]: string } = {
     python: "#4B8BBE",
     javascript: "#F0DB4F",
     typescript: "#007ACC",
@@ -33,10 +33,16 @@ function Language({ name }) {
   return <Tag name={name} color={lang_colour} />;
 }
 
-function Tags({ language, topics }) {
+function Tags({
+  language,
+  topics,
+}: {
+  language: string | null;
+  topics?: string[];
+}) {
   let tags;
   if (topics !== undefined) {
-    tags = topics.map((t) => <Tag name={t} />);
+    tags = topics.map((t) => <Tag key={t} name={t} />);
   }
 
   return (
@@ -47,12 +53,21 @@ function Tags({ language, topics }) {
   );
 }
 
-function ProjectTitle({ text }) {
+function ProjectTitle({ text }: { text: string }) {
   return <h2 className={styles.ProjectTitle}>{text}</h2>;
 }
 
-function ProjectDescription({ text }) {
+function ProjectDescription({ text }: { text: string | null }) {
   return <p className={styles.ProjectDescription}>{text}</p>;
+}
+
+interface ProjectProps {
+  name: string;
+  description: string | null;
+  html_url: string;
+  language: string | null;
+  topics?: string[];
+  has_pages: boolean;
 }
 
 export default function Project({
@@ -62,7 +77,7 @@ export default function Project({
   language,
   topics,
   has_pages,
-}) {
+}: ProjectProps) {
   return (
     <Card className={styles.Project}>
       <div>
@@ -75,11 +90,12 @@ export default function Project({
       <div className={styles.Links}>
         {/* Could instead utilise 2 routers a hash router and a not hash router? */}
         {has_pages && name !== "rexgreenway.github.io" && (
-          <PagesLink to={`https://rexgreenway.github.io/${name}/`}>
-            Website
-          </PagesLink>
+          <PagesLink
+            to={`https://rexgreenway.github.io/${name}/`}
+            text="Website"
+          />
         )}
-        <ExternalLink to={html_url}>GitHub</ExternalLink>
+        <ExternalLink to={html_url} text="GitHub" />
       </div>
     </Card>
   );

@@ -1,16 +1,16 @@
 import Container from "../containers/Container";
-
-import styles from "./About.module.css";
 import HorizontalLine from "../components/HorizontalLine";
 
 import PDF from "../documents/2024-06-01-CV.pdf";
 import { PDFLink } from "../components/CustomLinks";
 
+import styles from "./About.module.css";
+
 export default function AboutPage() {
   return (
     <Container className={styles.AboutPage}>
       {/* CV Download */}
-      <PDFLink pdfUrl={PDF}>Download CV</PDFLink>
+      <PDFLink to={PDF} text="Download CV" />
 
       <br />
 

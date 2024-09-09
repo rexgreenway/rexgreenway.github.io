@@ -4,49 +4,53 @@ import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRound
 
 import styles from "./CustomLinks.module.css";
 
-export function PagesLink({ to, children }) {
-  return (
-    <a className={`${styles.Links} ${styles.ExternalLink}`} href={to}>
-      {children}
-    </a>
-  );
+interface CustomLinkProps {
+  to: string;
+  text: string;
 }
 
-export function ExternalLink({ to, children }) {
+export const PagesLink = ({ to, text }: CustomLinkProps) => {
+  return (
+    <a className={`${styles.Links} ${styles.ExternalLink}`} href={to}>
+      {text}
+    </a>
+  );
+};
+
+export const ExternalLink = ({ to, text }: CustomLinkProps) => {
   return (
     <Link
       className={`${styles.Links} ${styles.ExternalLink}`}
       to={to}
       target="_blank"
     >
-      {children}
+      {text}
       <OpenInNewIcon />
     </Link>
   );
-}
+};
 
-export function PDFLink({ pdfUrl, children }) {
+export const PDFLink = ({ to, text }: CustomLinkProps) => {
   const openPDF = () => {
-    window.open(pdfUrl, "_blank");
+    window.open(to, "_blank");
   };
 
   return (
     <button
       className={`${styles.Links} ${styles.ExternalLink} ${styles.Button}`}
       onClick={openPDF}
-      target="_blank"
     >
-      {children}
+      {text}
       <OpenInNewIcon />
     </button>
   );
-}
+};
 
-export function SeeMore({ to, children }) {
+export const SeeMore = ({ to, text }: CustomLinkProps) => {
   return (
     <NavLink className={`${styles.Links} ${styles.SeeMore}`} to={to}>
-      {children}
+      {text}
       <ArrowForwardIosRoundedIcon />
     </NavLink>
   );
-}
+};
