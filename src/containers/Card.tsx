@@ -4,7 +4,7 @@ import styles from "./Card.module.css";
 import Container from "./Container";
 
 interface CardProps {
-  className: string;
+  className?: string;
   children: ReactNode;
 }
 

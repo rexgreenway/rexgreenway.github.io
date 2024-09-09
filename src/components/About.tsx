@@ -22,7 +22,7 @@ function About() {
         <br />
 
         {/* CV Download */}
-        <PDFLink pdfUrl={PDF}>Download CV</PDFLink>
+        <PDFLink to={PDF} text="Download CV" />
       </div>
     </Container>
   );
