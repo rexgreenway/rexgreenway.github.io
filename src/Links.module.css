@@ -7,6 +7,6 @@
 }
 
 .Link {
-    color: white;
+    color: var(--text);
     width: 100%;
 }

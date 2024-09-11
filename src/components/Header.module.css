@@ -12,7 +12,7 @@
 
     /* SVG Styling */
     display: block;
-    fill: white;
+    fill: var(--text);
     height: 75px;
 }
   
@@ -27,7 +27,7 @@
 }
 
 .NavBar a {
-    color: #ddd;
+    color: var(--text);
     font-size: 20px;
     text-decoration: none;
 }

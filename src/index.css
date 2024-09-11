@@ -12,12 +12,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
 
+/* Set some variables */
+:root {
+    --background: white;
+    --text: black;
+  }
+  [data-theme='dark'] {
+    --background: #121212;
+    --text: #ddd;
+  }
+
 body {
-    /* To be replaced with the CSS Painting API */
-    background-color:  #121212;
+    background-color:  var(--background);
 
     font-family: 'Bebas Neue', monospace;
-    color: #ddd;
+    color: var(--text);
     letter-spacing: 2px;
     
     margin: 20px 10% 20px 10%

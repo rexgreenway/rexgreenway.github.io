@@ -1,5 +1,5 @@
 .Links {
-    color: white;
+    color: var(--text);
     text-decoration: none;
 
     /* Element Centering */
@@ -12,7 +12,7 @@
 
 .ExternalLink {
     /* Circle Border */
-    border: 2px solid white;
+    border: 2px solid var(--text);
     border-radius: 20px;
     padding: 5px;
     padding-left: 10px;
@@ -22,7 +22,7 @@
 
 /* HOVER -> Invert/Animate */
 .ExternalLink:hover {
-    background-color: black;
+    background-color: var(--background);
     filter: invert(1);
     transition: linear 0.1s;
 }
