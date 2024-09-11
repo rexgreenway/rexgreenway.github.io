@@ -1,28 +1,14 @@
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, Navigate, RouterProvider } from "react-router-dom";
 
-import App from "./App";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import AboutPage from "./pages/About";
+import routes from "./routes";
 
 const router = createHashRouter([
   {
     path: "/",
-    element: <App />,
     errorElement: <h1>Something Went Wrong</h1>,
     children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "projects",
-        element: <Projects />,
-      },
-      {
-        path: "about",
-        element: <AboutPage />,
-      },
+      { index: true, element: <Navigate to={routes[0].path!} replace /> },
+      ...routes,
     ],
   },
 ]);

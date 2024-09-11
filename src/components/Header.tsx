@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, RouteObject } from "react-router-dom";
 
 import RexLogo from "../assets/R-Logo.svg?react";
 
@@ -6,36 +6,37 @@ import Container from "../containers/Container";
 import HorizontalLine from "./HorizontalLine";
 
 import styles from "./Header.module.css";
-import { ReactNode } from "react";
 
-// NavLink Wrapper for CSS Module Use
-function HeaderLink({ to, children }: { to: string; children: ReactNode }) {
+const HeaderLink = ({ to }: { to: string }) => {
   return (
     <NavLink
       to={to}
       className={({ isActive }) => (isActive ? styles.active : "")}
+      end
     >
-      {children}
+      {to || "home"}
     </NavLink>
   );
-}
+};
 
-function Header() {
+const Header = ({ navLinks }: { navLinks?: RouteObject }) => {
   return (
     <div id="header">
       <Container className={styles.Header}>
         {/* TODO: Make LOGO/TITLE Clickable */}
         <RexLogo className={styles.Logo} />
         <h1 className={styles.Title}>Rex Greenway</h1>
+
+        {/* NAVIGATION: Based on passed contextual route hierarchy */}
         <nav className={styles.NavBar}>
-          <HeaderLink to="/">Home</HeaderLink>
-          <HeaderLink to="/projects">Projects</HeaderLink>
-          <HeaderLink to="/about">About</HeaderLink>
+          {navLinks?.children?.map((k) => (
+            <HeaderLink key={k.path || "home"} to={k.path || ""} />
+          ))}
         </nav>
       </Container>
       <HorizontalLine />
     </div>
   );
-}
+};
 
 export default Header;
