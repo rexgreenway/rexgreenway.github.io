@@ -10,30 +10,37 @@
     grid-row-start: 1;
     grid-row-end: 3;
 
-    /* SVG Styling */
-    display: block;
-    fill: var(--text);
-    height: 75px;
+    svg {
+        /* SVG Styling */
+        display: block;
+        fill: var(--text);
+        height: 75px;
+    }
 }
   
 .Title {
     align-self: center;
+    color: var(--text);
+    text-decoration: none;
 }
   
 .NavBar {
     display: flex;
     flex-direction: row;
     gap: 20px;
-}
 
-.NavBar a {
-    color: var(--text);
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.NavBar a.active {
-    text-decoration: underline;
+    a {
+        color: var(--text);
+        font-size: 20px;
+    }
+    
+    .inactive {
+        text-decoration: none;
+    }
+    
+    .active {
+        text-decoration: underline;
+    }
 }
 
 

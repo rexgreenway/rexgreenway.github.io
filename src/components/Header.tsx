@@ -7,30 +7,30 @@ import HorizontalLine from "./HorizontalLine";
 
 import styles from "./Header.module.css";
 
-const HeaderLink = ({ to }: { to: string }) => {
-  return (
-    <NavLink
-      to={to}
-      className={({ isActive }) => (isActive ? styles.active : "")}
-      end
-    >
-      {to || "home"}
-    </NavLink>
-  );
-};
-
 const Header = ({ navLinks }: { navLinks?: RouteObject }) => {
   return (
     <div id="header">
       <Container className={styles.Header}>
-        {/* TODO: Make LOGO/TITLE Clickable */}
-        <RexLogo className={styles.Logo} />
-        <h1 className={styles.Title}>Rex Greenway</h1>
+        <NavLink to="" className={styles.Logo}>
+          <RexLogo />
+        </NavLink>
+        <NavLink to="" className={styles.Title}>
+          <h1>Rex Greenway</h1>
+        </NavLink>
 
         {/* NAVIGATION: Based on passed contextual route hierarchy */}
         <nav className={styles.NavBar}>
           {navLinks?.children?.map((k) => (
-            <HeaderLink key={k.path || "home"} to={k.path || ""} />
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? styles.active : styles.inactive
+              }
+              key={k.path || "home"}
+              to={k.path || ""}
+              end
+            >
+              {k.path || "home"}
+            </NavLink>
           ))}
         </nav>
       </Container>
