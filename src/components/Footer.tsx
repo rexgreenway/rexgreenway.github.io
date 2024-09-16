@@ -3,6 +3,7 @@ import HorizontalLine from "./HorizontalLine";
 
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 import styles from "./Footer.module.css";
 
@@ -17,6 +18,9 @@ export default function Footer() {
           </a>
           <a href="https://www.linkedin.com/in/rexgreenway/">
             <LinkedInIcon className={styles.Link} />
+          </a>
+          <a href="https://www.instagram.com/rexgreenway/">
+            <InstagramIcon className={styles.Link} />
           </a>
         </div>
       </Container>
