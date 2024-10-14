@@ -23,7 +23,7 @@ const Modal = ({ close, children }: ModalProps) => {
   }, [close]);
 
   return (
-    <div className={styles.ModalBackground}>
+    <div onClick={close} className={styles.ModalBackground}>
       <CloseRoundedIcon
         fontSize="large"
         className={styles.CloseButton}
