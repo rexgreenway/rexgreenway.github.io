@@ -8,7 +8,13 @@ import routes from "./routes";
 
 import styles from "./App.module.css";
 
-const App = ({ theme }: { theme?: Theme }) => {
+const App = ({
+  homeTitle = "home",
+  theme,
+}: {
+  homeTitle?: string;
+  theme?: Theme;
+}) => {
   const location = useLocation();
   const subRoute = routes.find(
     (route) => route.path && location.pathname.startsWith(route.path)
@@ -21,7 +27,7 @@ const App = ({ theme }: { theme?: Theme }) => {
 
   return (
     <div className={styles.Layout}>
-      <Header navLinks={subRoute} />
+      <Header homeTitle={homeTitle} navLinks={subRoute} />
       <Outlet />
       <Footer />
     </div>
