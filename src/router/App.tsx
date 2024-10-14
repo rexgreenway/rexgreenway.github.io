@@ -14,8 +14,6 @@ const App = ({ theme }: { theme?: Theme }) => {
     (route) => route.path && location.pathname.startsWith(route.path)
   );
 
-  console.log(subRoute);
-
   // Set Theme
   if (theme) {
     ThemeMap[theme]();
