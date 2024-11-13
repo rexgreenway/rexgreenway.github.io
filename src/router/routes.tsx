@@ -7,6 +7,7 @@ import { Theme } from "./Theme";
 import Home from "../pages/Home";
 import Projects from "../pages/Projects";
 import AboutPage from "../pages/About";
+import Photography from "../pages/Photography";
 
 const softwareRoutes: RouteObject = {
   path: "/software",
@@ -29,11 +30,11 @@ const softwareRoutes: RouteObject = {
 
 const portfolioRoutes: RouteObject = {
   path: "/portfolio",
-  element: <App theme={Theme.Light} />,
+  element: <App homeTitle="photography" theme={Theme.Light} />,
   children: [
     {
       index: true,
-      element: <h2>Coming Soon</h2>,
+      element: <Photography />,
     },
   ],
 };
