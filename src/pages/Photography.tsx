@@ -21,7 +21,11 @@ async function getAlbum(album_name: string) {
     const json = await response.json();
     return json;
   } catch (error) {
-    console.error(error.message);
+    if (error instanceof Error) {
+      console.log(error.message);
+    } else {
+      console.log("Unexpected error", error);
+    }
   }
 }
 
@@ -38,9 +42,18 @@ async function getPhoto(album_name: string, image_name: string) {
     const json = await response.json();
     return json;
   } catch (error) {
-    console.error(error.message);
+    if (error instanceof Error) {
+      console.log(error.message);
+    } else {
+      console.log("Unexpected error", error);
+    }
   }
 }
+
+type Image = {
+  path: string;
+  url: string;
+};
 
 const ThumbnailSection = ({
   album_name,
@@ -56,7 +69,7 @@ const ThumbnailSection = ({
     getAlbum(album_name).then((album) => {
       setAlbumSection(
         <ThumbnailGrid>
-          {album.images.map((image) => (
+          {album.images.map((image: Image) => (
             <Thumbnail
               onClick={() => handleOpen(album.name, image.path)}
               src={image.url}
