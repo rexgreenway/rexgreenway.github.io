@@ -29,6 +29,9 @@ body {
     color: var(--text);
     letter-spacing: 2px;
     
+}
+
+#root {
     margin: 20px 10% 20px 10%
 }
 

@@ -7,7 +7,13 @@ import HorizontalLine from "./HorizontalLine";
 
 import styles from "./Header.module.css";
 
-const Header = ({ navLinks }: { navLinks?: RouteObject }) => {
+const Header = ({
+  homeTitle,
+  navLinks,
+}: {
+  homeTitle: string;
+  navLinks?: RouteObject;
+}) => {
   return (
     <div id="header">
       <Container className={styles.Header}>
@@ -29,7 +35,7 @@ const Header = ({ navLinks }: { navLinks?: RouteObject }) => {
               to={k.path || ""}
               end
             >
-              {k.path || "home"}
+              {k.path || homeTitle}
             </NavLink>
           ))}
         </nav>

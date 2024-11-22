@@ -4,7 +4,6 @@
 }
 
 .Grid {
-    --card-width: 300px;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(var(--card-width), 1fr));
