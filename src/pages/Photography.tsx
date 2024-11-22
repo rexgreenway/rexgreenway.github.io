@@ -5,8 +5,8 @@ import { Thumbnail, ThumbnailGrid } from "../containers/Thumbnail";
 import { ImageModal } from "../containers/Modal";
 import HorizontalLine from "../components/HorizontalLine";
 
-const API_URL = "http://localhost:8000";
-// const API_URL = "https://rex-api-505972842640.europe-west2.run.app";
+// const API_URL = "http://localhost:8000";
+const API_URL = "https://rex-api-505972842640.europe-west2.run.app";
 
 async function getAlbum(album_name: string) {
   const encoded_name = encodeURI(album_name);
