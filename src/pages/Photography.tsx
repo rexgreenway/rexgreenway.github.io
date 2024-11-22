@@ -72,9 +72,7 @@ const ThumbnailSection = ({
     <>
       <HorizontalLine />
       <SectionTitle title={album_name} />
-      <h3>FILM-STOCK</h3>
-      {loaded ? albumSection : <p>LOADING...</p>}
-      <h3>FILM-STOCK</h3>
+      {/* <h3>FILM-STOCK</h3> */}
       {loaded ? albumSection : <p>LOADING...</p>}
     </>
   );
