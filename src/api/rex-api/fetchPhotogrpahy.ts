@@ -2,8 +2,8 @@ import { Album, Image } from "@mui/icons-material";
 
 // API URL
 
-const API_URL = "http://127.0.0.1:8000";
-// const API_URL = "https://rex-api-505972842640.europe-west2.run.app";
+// const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://rex-api-505972842640.europe-west2.run.app";
 
 // RESPONSE TYPES
 
