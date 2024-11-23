@@ -1,6 +1,9 @@
 import { useState, useEffect, ReactElement } from "react";
 
-import { fetchProjects, listUserReposResponseData } from "../api/fetchProjects";
+import {
+  fetchProjects,
+  listUserReposResponseData,
+} from "../api/gh/fetchProjects";
 import Project from "../components/Project";
 import SplitPane from "../containers/SplitPane";
 import About from "../components/About";

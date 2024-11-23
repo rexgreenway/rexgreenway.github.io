@@ -4,98 +4,76 @@ import SectionTitle from "../components/SectionTitle";
 import { Thumbnail, ThumbnailGrid } from "../containers/Thumbnail";
 import { ImageModal } from "../containers/Modal";
 import HorizontalLine from "../components/HorizontalLine";
-
-// const API_URL = "http://localhost:8000";
-const API_URL = "https://rex-api-505972842640.europe-west2.run.app";
-
-async function getAlbum(album_name: string) {
-  const encoded_name = encodeURI(album_name);
-  const url = `${API_URL}/photography/${encoded_name}`;
-
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
-
-    const json = await response.json();
-    return json;
-  } catch (error) {
-    if (error instanceof Error) {
-      console.log(error.message);
-    } else {
-      console.log("Unexpected error", error);
-    }
-  }
-}
-
-async function getPhoto(album_name: string, image_name: string) {
-  const encoded_path = encodeURI(`${album_name}/${image_name}`);
-  const url = `${API_URL}/photography/${encoded_path}`;
-
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
-
-    const json = await response.json();
-    return json;
-  } catch (error) {
-    if (error instanceof Error) {
-      console.log(error.message);
-    } else {
-      console.log("Unexpected error", error);
-    }
-  }
-}
-
-type Image = {
-  path: string;
-  url: string;
-};
+import { getAlbum, getPhoto, Image } from "../api/rex-api/fetchPhotogrpahy";
 
 const ThumbnailSection = ({
   album_name,
   handleOpen,
-}: {
+}: // film_stock,
+{
   album_name: string;
   handleOpen: (album: string, path: string) => void;
+  // film_stock?: string;
 }) => {
   const [albumSection, setAlbumSection] = useState<ReactElement>();
   const [loaded, setLoaded] = useState<boolean>(false);
+  const [fetchError, setFetchError] = useState<boolean>(false);
 
   useEffect(() => {
-    getAlbum(album_name).then((album) => {
-      setAlbumSection(
-        <ThumbnailGrid>
-          {album.images.map((image: Image) => (
-            <Thumbnail
-              onClick={() => handleOpen(album.name, image.path)}
-              src={image.url}
-            />
-          ))}
-        </ThumbnailGrid>
-      );
-      setLoaded(true);
-    });
+    getAlbum(album_name)
+      .then((album) => {
+        setAlbumSection(
+          <ThumbnailGrid>
+            {album.images.map((image: Image) => (
+              <Thumbnail
+                key={`${album_name}/${image.path}`}
+                onClick={() => handleOpen(album.name, image.path)}
+                src={image.url}
+              />
+            ))}
+          </ThumbnailGrid>
+        );
+        setLoaded(true);
+      })
+      .catch(() => {
+        setFetchError(true);
+        setLoaded(true);
+      });
   }, [album_name, handleOpen]);
 
   return (
     <>
-      <HorizontalLine />
       <SectionTitle title={album_name} />
-      {/* <h3>FILM-STOCK</h3> */}
+      {/* {film_stock && <h3>{film_stock}</h3>} */}
+      {fetchError && (
+        <p style={{ color: "red" }}>ERROR RETRIEVING ALBUM: '{album_name}'</p>
+      )}
       {loaded ? albumSection : <p>LOADING...</p>}
     </>
   );
 };
 
-const ALBUMS = [
-  "croatia-2024",
-  "greece-2023",
-  "south-america-2023",
-  "half-exposed",
+const ALBUMS_NEW = [
+  {
+    name: "croatia-2024",
+    display_name: "Croatia 2024",
+    film_stock: "test-1",
+  },
+  {
+    name: "greece-2023",
+    display_name: "Greece 2023",
+    film_stock: "test-2",
+  },
+  {
+    name: "south-america-2023",
+    display_name: "South America 2023",
+    film_stock: "test-3",
+  },
+  {
+    name: "half-exposed",
+    display_name: "Half Exposed",
+    film_stock: "test-4",
+  },
 ];
 
 const Photography = () => {
@@ -111,12 +89,20 @@ const Photography = () => {
     });
   };
 
-  const sections = [];
-  for (const album_name of ALBUMS) {
+  const sections: ReactElement[] = [];
+  ALBUMS_NEW.forEach((album, index) => {
+    if (index !== 0) {
+      sections.push(<HorizontalLine key={index} />);
+    }
     sections.push(
-      <ThumbnailSection album_name={album_name} handleOpen={handleOpen} />
+      <ThumbnailSection
+        key={album.name}
+        album_name={album.name}
+        handleOpen={handleOpen}
+        // film_stock={album.film_stock}
+      />
     );
-  }
+  });
 
   return (
     <>
