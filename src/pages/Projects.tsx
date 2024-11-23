@@ -1,5 +1,8 @@
 import { useState, useEffect, ReactElement } from "react";
-import { listUserReposResponseData, fetchProjects } from "../api/fetchProjects";
+import {
+  listUserReposResponseData,
+  fetchProjects,
+} from "../api/gh/fetchProjects";
 import Project from "../components/Project";
 
 import { Grid } from "../containers/CardContainers";
