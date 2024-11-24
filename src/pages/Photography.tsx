@@ -9,11 +9,11 @@ import { getAlbum, getPhoto, Image } from "../api/rex-api/fetchPhotogrpahy";
 const ThumbnailSection = ({
   album_name,
   handleOpen,
-}: // film_stock,
-{
+  film_stock,
+}: {
   album_name: string;
   handleOpen: (album: string, path: string) => void;
-  // film_stock?: string;
+  film_stock?: string;
 }) => {
   const [albumSection, setAlbumSection] = useState<ReactElement>();
   const [loaded, setLoaded] = useState<boolean>(false);
@@ -43,8 +43,7 @@ const ThumbnailSection = ({
 
   return (
     <>
-      <SectionTitle title={album_name} />
-      {/* {film_stock && <h3>{film_stock}</h3>} */}
+      {film_stock && <h3>{film_stock}</h3>}
       {fetchError && (
         <p style={{ color: "red" }}>ERROR RETRIEVING ALBUM: '{album_name}'</p>
       )}
@@ -53,26 +52,123 @@ const ThumbnailSection = ({
   );
 };
 
-const ALBUMS_NEW = [
+const ALBUMS = [
   {
-    name: "croatia-2024",
-    display_name: "Croatia 2024",
-    film_stock: "test-1",
+    name: "London 2024",
+    albums: [
+      {
+        name: "london-test-gold",
+        film_stock: "Kodak Gold",
+      },
+      {
+        name: "london-expired-konica-400",
+        film_stock: "Expired Konica 400",
+      },
+    ],
   },
   {
-    name: "greece-2023",
-    display_name: "Greece 2023",
-    film_stock: "test-2",
+    name: "Brighton",
+    albums: [
+      {
+        name: "brighton-tmax",
+        film_stock: "TMax 100",
+      },
+    ],
   },
   {
-    name: "south-america-2023",
-    display_name: "South America 2023",
-    film_stock: "test-3",
+    name: "Brov's 60th",
+    albums: [
+      {
+        name: "brov-bday-kono-delight-400",
+        film_stock: "Ektar 100",
+      },
+      {
+        name: "appledore-regatta-pheonix",
+        film_stock: "Harman Pheonix 200",
+      },
+    ],
   },
   {
-    name: "half-exposed",
-    display_name: "Half Exposed",
-    film_stock: "test-4",
+    name: "Malta / Kew",
+    albums: [
+      {
+        name: "malta-kew-kentmere",
+        film_stock: "Kentmere 400",
+      },
+    ],
+  },
+  {
+    name: "Croatia 2024",
+    albums: [
+      {
+        name: "croatia-2023-ektar",
+        film_stock: "Ektar 100",
+      },
+    ],
+  },
+  {
+    name: "LA 2024",
+    albums: [
+      {
+        name: "la-kono-monsoon",
+        film_stock: "Kono! Original Monsoon",
+      },
+      {
+        name: "la-gold",
+        film_stock: "Kodak Gold",
+      },
+      {
+        name: "la-portra-160",
+        film_stock: "Portra 160",
+      },
+    ],
+  },
+  {
+    name: "Wrestling",
+    albums: [
+      {
+        name: "wrestling-kentmere",
+        film_stock: "Kentmere 400",
+      },
+    ],
+  },
+  {
+    name: "South America 2023",
+    albums: [
+      {
+        name: "lat-am-ultramax-1",
+        film_stock: "Ultramax 400",
+      },
+      {
+        name: "lat-am-ultramax-2",
+        film_stock: "Ultramax 400",
+      },
+      {
+        name: "lat-am-ektar",
+        film_stock: "Ektar 100",
+      },
+      {
+        name: "lat-am-lomo-purple",
+        film_stock: "Lomo Purple",
+      },
+      {
+        name: "lat-am-portra-400",
+        film_stock: "Portra 400",
+      },
+    ],
+  },
+  {
+    name: "Greece 2023",
+    albums: [
+      {
+        name: "greece-2023-kentmere",
+        film_stock: "Kentmere 400",
+      },
+      {
+        name: "greece-2023-ektar",
+        film_stock: "Ektar 100",
+      },
+    ],
   },
 ];
 
@@ -90,18 +186,23 @@ const Photography = () => {
   };
 
   const sections: ReactElement[] = [];
-  ALBUMS_NEW.forEach((album, index) => {
+  ALBUMS.forEach((collection, index) => {
     if (index !== 0) {
       sections.push(<HorizontalLine key={index} />);
     }
     sections.push(
-      <ThumbnailSection
-        key={album.name}
-        album_name={album.name}
-        handleOpen={handleOpen}
-        // film_stock={album.film_stock}
-      />
+      <SectionTitle key={collection.name} title={collection.name} />
     );
+    collection.albums.forEach((album) => {
+      sections.push(
+        <ThumbnailSection
+          key={album.name}
+          album_name={album.name}
+          handleOpen={handleOpen}
+          film_stock={album.film_stock}
+        />
+      );
+    });
   });
 
   return (
