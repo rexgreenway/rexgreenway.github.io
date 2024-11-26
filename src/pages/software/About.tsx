@@ -1,8 +1,8 @@
-import Container from "../containers/Container";
-import HorizontalLine from "../components/HorizontalLine";
+import { PDFLink } from "../../components/CustomLinks";
+import HorizontalLine from "../../components/HorizontalLine";
+import Container from "../../containers/Container";
 
-import PDF from "../documents/2024-06-01-CV.pdf";
-import { PDFLink } from "../components/CustomLinks";
+import PDF from "../../documents/2024-06-01-CV.pdf";
 
 import styles from "./About.module.css";
 
