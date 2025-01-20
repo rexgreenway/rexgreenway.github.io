@@ -9,6 +9,7 @@ import Projects from "../pages/software/Projects";
 import AboutPage from "../pages/software/About";
 
 import Photography from "../pages/portfolio/Photography";
+import CollectionPage from "../pages/portfolio/Collection";
 
 const softwareRoutes: RouteObject = {
   path: "/software",
@@ -37,10 +38,10 @@ const portfolioRoutes: RouteObject = {
       index: true,
       element: <Photography />,
     },
-    // {
-    //   path: ":album",
-    //   element: <AlbumPage />,
-    // },
+    {
+      path: ":collectionId",
+      element: <CollectionPage />,
+    },
   ],
 };
 
