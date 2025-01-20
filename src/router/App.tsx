@@ -1,4 +1,5 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useNavigation } from "react-router-dom";
+import { CircularProgress } from "@mui/material";
 
 import { Theme, ThemeMap } from "./Theme";
 import Header from "../components/Header";
@@ -25,10 +26,16 @@ const App = ({
     ThemeMap[theme]();
   }
 
+  const navigation = useNavigation();
+
   return (
     <div className={styles.Layout}>
       <Header homeTitle={homeTitle} navLinks={subRoute} />
-      <Outlet />
+      {navigation.state == "loading" ? (
+        <CircularProgress color="inherit" />
+      ) : (
+        <Outlet />
+      )}
       <Footer />
     </div>
   );
