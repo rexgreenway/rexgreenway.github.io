@@ -1,7 +1,5 @@
 import { Album, Image } from "@mui/icons-material";
 
-// API URL
-
 // const API_URL = "http://127.0.0.1:8000";
 const API_URL = "https://rex-api-505972842640.europe-west2.run.app";
 
@@ -16,6 +14,11 @@ export interface Album {
   name: string;
   path: string;
   images: Image[];
+}
+
+export enum Size {
+  SMALL = "small",
+  LARGE = "large",
 }
 
 // REQUESTS
@@ -54,14 +57,16 @@ export async function getAlbum(album_name: string): Promise<Album> {
  *
  * @param {string} album_name
  * @param {string} image_name
+ * @param {Size} [size=Size.LARGE] Optional
  *
  * @returns {Image} The desired photo.
  */
 export async function getPhoto(
   album_name: string,
-  image_name: string
+  image_name: string,
+  size: Size = Size.LARGE
 ): Promise<Image> {
-  const encoded_path = encodeURI(`${album_name}/${image_name}`);
+  const encoded_path = encodeURI(`${album_name}/${image_name}?size=${size}`);
   const url = `${API_URL}/photography/${encoded_path}`;
 
   try {

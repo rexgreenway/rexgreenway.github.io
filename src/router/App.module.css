@@ -4,3 +4,7 @@
     flex-direction: column;
     gap: 20px;
 }
+
+.Spinner {
+    color: black;
+}

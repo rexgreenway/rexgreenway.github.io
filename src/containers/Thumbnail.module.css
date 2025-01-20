@@ -3,10 +3,27 @@
   --thumbnail-width: 150px;
 }
 
+.ThumbnailContainer {
+  position: relative;
+}
+
 .Thumbnail {
   height: var(--thumbnail-width);
   cursor: pointer;
   border-radius: 5px;
+}
+
+.ThumbnailGrey {
+  opacity: 0.8;
+}
+
+.ThumbnailTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  text-align: center;
 }
 
 .ThumbnailGrid {
@@ -14,5 +31,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
+/* Float NavBar Down for Mobile View */
+@media only screen and (max-width: 380px) {
+  .ThumbnailTitle {
+      row-gap: 20px;
+  }
+}

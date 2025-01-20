@@ -4,10 +4,12 @@ import App from "./App";
 import { Theme } from "./Theme";
 
 // Pages
-import Home from "../pages/Home";
-import Projects from "../pages/Projects";
-import AboutPage from "../pages/About";
-import Photography from "../pages/Photography";
+import Home from "../pages/software/Home";
+import Projects from "../pages/software/Projects";
+import AboutPage from "../pages/software/About";
+
+import Photography from "../pages/portfolio/Photography";
+import CollectionPage from "../pages/portfolio/Collection";
 
 const softwareRoutes: RouteObject = {
   path: "/software",
@@ -35,6 +37,10 @@ const portfolioRoutes: RouteObject = {
     {
       index: true,
       element: <Photography />,
+    },
+    {
+      path: ":collectionId",
+      element: <CollectionPage />,
     },
   ],
 };

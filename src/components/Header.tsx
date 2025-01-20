@@ -26,18 +26,23 @@ const Header = ({
 
         {/* NAVIGATION: Based on passed contextual route hierarchy */}
         <nav className={styles.NavBar}>
-          {navLinks?.children?.map((k) => (
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? styles.active : styles.inactive
-              }
-              key={k.path || "home"}
-              to={k.path || ""}
-              end
-            >
-              {k.path || homeTitle}
-            </NavLink>
-          ))}
+          {navLinks?.children?.map((k) => {
+            // Only include nav links to non dynamic segments
+            if (!k.path?.includes(":")) {
+              return (
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? styles.active : styles.inactive
+                  }
+                  key={k.path || "home"}
+                  to={k.path || ""}
+                  end
+                >
+                  {k.path || homeTitle}
+                </NavLink>
+              );
+            }
+          })}
         </nav>
       </Container>
       <HorizontalLine />

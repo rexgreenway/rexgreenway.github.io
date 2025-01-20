@@ -1,0 +1,155 @@
+{
+  "london-2024": {
+    "name": "London 2024",
+    "thumbnail": {
+      "album_name": "london-test-gold",
+      "image_name": "london-test-gold-00001.jpeg"
+    },
+    "albums": [
+      {
+        "name": "london-test-gold",
+        "film_stock": "Kodak Gold"
+      },
+      {
+        "name": "london-expired-konica-400",
+        "film_stock": "Expired Konica 400"
+      }
+    ]
+  },
+  "brighton": {
+    "name": "Brighton",
+    "thumbnail": {
+      "album_name": "brighton-tmax",
+      "image_name": "brighton-tmax-00001.jpeg"
+    },
+    "albums": [
+      {
+        "name": "brighton-tmax",
+        "film_stock": "TMax 100"
+      }
+    ]
+  },
+  "brovs-60th": {
+    "name": "Brov's 60th",
+    "thumbnail": {
+      "album_name": "brov-bday-kono-delight-400",
+      "image_name": "brov-bday-kono-delight-400-00001.jpeg"
+    },
+    "albums": [
+      {
+        "name": "brov-bday-kono-delight-400",
+        "film_stock": "Ektar 100"
+      },
+      {
+        "name": "appledore-regatta-pheonix",
+        "film_stock": "Harman Pheonix 200"
+      }
+    ]
+  },
+  "malta-kew": {
+    "name": "Malta / Kew",
+    "thumbnail": {
+      "album_name": "malta-kew-kentmere",
+      "image_name": "malta-kew-kentmere-00001.jpeg"
+    },
+    "albums": [
+      {
+        "name": "malta-kew-kentmere",
+        "film_stock": "Kentmere 400"
+      }
+    ]
+  },
+  "croatia-2024": {
+    "name": "Croatia 2024",
+    "thumbnail": {
+      "album_name": "croatia-2023-ektar",
+      "image_name": "croatia-2023-ektar-00001.jpeg"
+    },
+    "albums": [
+      {
+        "name": "croatia-2023-ektar",
+        "film_stock": "Ektar 100"
+      }
+    ]
+  },
+  "la-2024": {
+    "name": "LA 2024",
+    "thumbnail": {
+      "album_name": "la-kono-monsoon",
+      "image_name": "la-kono-monsoon-00001.jpeg"
+    },
+    "albums": [
+      {
+        "name": "la-kono-monsoon",
+        "film_stock": "Kono! Original Monsoon"
+      },
+      {
+        "name": "la-gold",
+        "film_stock": "Kodak Gold"
+      },
+      {
+        "name": "la-portra-160",
+        "film_stock": "Portra 160"
+      }
+    ]
+  },
+  "wrestling": {
+    "name": "Wrestling",
+    "thumbnail": {
+      "album_name": "wrestling-kentmere",
+      "image_name": "wrestling-kentmere-00001.jpeg"
+    },
+    "albums": [
+      {
+        "name": "wrestling-kentmere",
+        "film_stock": "Kentmere 400"
+      }
+    ]
+  },
+  "south-america-2023": {
+    "name": "South America 2023",
+    "thumbnail": {
+      "album_name": "lat-am-ultramax-1",
+      "image_name": "lat-am-ultramax-1-00001.jpeg"
+    },
+    "albums": [
+      {
+        "name": "lat-am-ultramax-1",
+        "film_stock": "Ultramax 400"
+      },
+      {
+        "name": "lat-am-ultramax-2",
+        "film_stock": "Ultramax 400"
+      },
+      {
+        "name": "lat-am-ektar",
+        "film_stock": "Ektar 100"
+      },
+      {
+        "name": "lat-am-lomo-purple",
+        "film_stock": "Lomo Purple"
+      },
+      {
+        "name": "lat-am-portra-400",
+        "film_stock": "Portra 400"
+      }
+    ]
+  },
+  "greece-2023": {
+    "name": "Greece 2023",
+    "thumbnail": {
+      "album_name": "greece-2023-kentmere",
+      "image_name": "greece-2023-kentmere-00001.jpeg"
+    },
+    "albums": [
+      {
+        "name": "greece-2023-kentmere",
+        "film_stock": "Kentmere 400"
+      },
+      {
+        "name": "greece-2023-ektar",
+        "film_stock": "Ektar 100"
+      }
+    ]
+  }
+}
