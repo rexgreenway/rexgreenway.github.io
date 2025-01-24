@@ -96,7 +96,7 @@ const Collection = () => {
   return (
     <>
       <div className={styles.CollectionHeader}>
-        <NavLink to="" className={styles.Back}>
+        <NavLink to="../" className={styles.Back}>
           {"<- Back"}
         </NavLink>
         <SectionTitle title={collection.name} />
