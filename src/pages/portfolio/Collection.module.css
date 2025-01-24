@@ -1,0 +1,11 @@
+
+.Back {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.CollectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}

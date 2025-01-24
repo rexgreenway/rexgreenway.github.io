@@ -1,5 +1,5 @@
 import { ReactElement, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 
 import { getAlbum, getPhoto, Image } from "../../api/rex-api/fetchPhotography";
@@ -9,6 +9,8 @@ import { Thumbnail, ThumbnailGrid } from "../../containers/Thumbnail";
 import { ImageModal } from "../../containers/Modal";
 
 import data from "../../assets/albums.json";
+
+import styles from "./Collection.module.css";
 
 const COLLECTIONS: { [key: string]: Collection } = data;
 
@@ -93,7 +95,12 @@ const Collection = () => {
 
   return (
     <>
-      <SectionTitle title={collection.name} />
+      <div className={styles.CollectionHeader}>
+        <NavLink to="" className={styles.Back}>
+          {"<- Back"}
+        </NavLink>
+        <SectionTitle title={collection.name} />
+      </div>
       {collection.albums.map((a) => (
         <ThumbnailSection
           key={a.name}
