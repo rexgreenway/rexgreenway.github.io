@@ -11,7 +11,10 @@ export default function Footer() {
   return (
     <div id="footer">
       <HorizontalLine />
-      <Container>
+      <Container className={styles.Footer}>
+        <a href="https://rexgreenway.github.io/">
+          Website designed and maintained by Rex Greenway
+        </a>
         <div className={styles.Links}>
           <a href="https://github.com/RexGreenway/">
             <GitHubIcon className={styles.Link} />
