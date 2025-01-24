@@ -2,7 +2,7 @@
 .Header {
     column-gap: 20px;
     display: grid;
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: min-content 1fr min-content;
     grid-template-rows: min-content min-content 1fr;
 }
 
@@ -19,12 +19,30 @@
 }
   
 .Title {
+    grid-row-start: 1;
+    
     align-self: center;
     color: var(--text);
     text-decoration: none;
 }
+
+.Adjacent {
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    a {
+        color: var(--text);
+        text-decoration: none;
+    }
+}
   
 .NavBar {
+    grid-column-start: 2;
+
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -45,7 +63,7 @@
 
 
 /* Float NavBar Down for Mobile View */
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 520px) {
     .Header {
         row-gap: 20px;
     }
@@ -55,6 +73,10 @@
         grid-row-end: 3;
     }
 
+    .Adjacent {
+        display: none;   
+    }
+    
     .NavBar {
         grid-row-start: 3;
         grid-row-end: 4;
