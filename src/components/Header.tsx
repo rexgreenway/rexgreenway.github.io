@@ -24,13 +24,17 @@ const Header = ({
   return (
     <div id="header">
       <Container className={styles.Header}>
+        {/* LOGO */}
         <NavLink to="" className={styles.Logo}>
           <RexLogo />
         </NavLink>
 
-        <NavLink to="" className={styles.Title}>
-          <h1>Rex Greenway</h1>
-        </NavLink>
+        {/* TITLE / NAME */}
+        <div className={styles.Title}>
+          <NavLink to="">
+            <h1>Rex Greenway</h1>
+          </NavLink>
+        </div>
 
         {/* ADJACENT LINKS */}
         <div className={styles.Adjacent}>
