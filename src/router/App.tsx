@@ -1,7 +1,8 @@
 import { Outlet, useLocation, useNavigation } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 
-import { Theme, ThemeMap } from "./Theme";
+import setTheme, { Theme } from "./Theme";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -30,9 +31,7 @@ const App = ({
   });
 
   // Set Theme
-  if (theme) {
-    ThemeMap[theme]();
-  }
+  setTheme(theme);
 
   const navigation = useNavigation();
 

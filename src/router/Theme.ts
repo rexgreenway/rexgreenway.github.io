@@ -3,15 +3,36 @@ export enum Theme {
   Light = "light",
 }
 
-export const setDark = () => {
+const setDark = () => {
   document.documentElement.setAttribute("data-theme", Theme.Dark);
 };
 
-export const setLight = () => {
+const setLight = () => {
   document.documentElement.setAttribute("data-theme", Theme.Light);
 };
 
-export const ThemeMap: Record<Theme, () => void> = {
-  [Theme.Dark]: setDark,
-  [Theme.Light]: setLight,
+const setSystemTheme = () => {
+  const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+  if (darkThemeMq.matches) {
+    setDark();
+  } else {
+    setLight();
+  }
 };
+
+const setTheme = (theme: Theme | undefined) => {
+  switch (theme) {
+    case Theme.Light:
+      setLight();
+      break;
+
+    case Theme.Dark:
+      setDark();
+      break;
+
+    default:
+      setSystemTheme();
+  }
+};
+
+export default setTheme;
