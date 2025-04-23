@@ -1,0 +1,46 @@
+.Links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin: 40px 0 60px 0;
+}
+
+.Tile {
+  /* background: linear-gradient(90deg,rgba(255, 255, 255, 0.03) 0%, rgba(39, 0, 63, 0.2) 100%); */
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 80px;
+  box-shadow: 0 8px 10px 0px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  
+  width: 100%;
+  max-width: 500px;
+  height: 120px;
+  
+  text-decoration: none;
+  color: var(--text);
+
+  padding-right: 40px;
+  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+  text-align: right;
+  overflow: hidden;
+}
+
+.TileLayout {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .Subtitle {
+    display: none;
+  }
+}
