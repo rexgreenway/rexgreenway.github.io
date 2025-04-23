@@ -12,23 +12,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap');
 
-/* Set some variables */
+/* Default/Light Theme */
 :root {
-    --background: white;
+    --background: rgb(230, 230, 230);
     --text: black;
-  }
-  [data-theme='dark'] {
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
     --background: #121212;
     --text: #ddd;
-  }
+}
 
 body {
     background-color:  var(--background);
-
+    
     font-family: 'Bebas Neue', monospace;
     color: var(--text);
     letter-spacing: 2px;
     
+    /* Fade background and text color changes */
+    transition: all 0.2s linear;
 }
 
 #root {
