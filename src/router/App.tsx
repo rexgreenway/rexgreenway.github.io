@@ -3,20 +3,21 @@ import { CircularProgress } from "@mui/material";
 
 import setTheme, { Theme } from "./Theme";
 
-import Header from "../components/Header";
+import Header, { SimpleHeader } from "../components/Header";
 import Footer from "../components/Footer";
+import HorizontalLine from "../components/HorizontalLine";
 
 import routes from "./routes";
 
 import styles from "./App.module.css";
 
-const App = ({
-  homeTitle = "home",
-  theme,
-}: {
+interface AppProps {
   homeTitle?: string;
   theme?: Theme;
-}) => {
+  simple?: boolean;
+}
+
+const App = ({ homeTitle = "home", theme, simple }: AppProps) => {
   // Get current route path
   const location = useLocation();
 
@@ -35,21 +36,37 @@ const App = ({
 
   const navigation = useNavigation();
 
-  return (
-    <div className={styles.Layout}>
-      <Header
-        homeTitle={homeTitle}
-        navLinks={subRoute}
-        adjacentLinks={adjacentRoutes}
-      />
-      {navigation.state == "loading" ? (
-        <CircularProgress color="inherit" />
-      ) : (
+  if (simple) {
+    return (
+      <div className={styles.LayoutSimple}>
+        <SimpleHeader />
         <Outlet />
-      )}
-      <Footer />
-    </div>
-  );
+        <Footer />
+      </div>
+    );
+  } else {
+    return (
+      <div className={styles.Layout}>
+        <div>
+          <Header
+            homeTitle={homeTitle}
+            navLinks={subRoute}
+            adjacentLinks={adjacentRoutes}
+          />
+          <HorizontalLine />
+        </div>
+        {navigation.state == "loading" ? (
+          <CircularProgress color="inherit" />
+        ) : (
+          <Outlet />
+        )}
+        <div>
+          <HorizontalLine />
+          <Footer />
+        </div>
+      </div>
+    );
+  }
 };
 
 export default App;
