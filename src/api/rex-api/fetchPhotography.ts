@@ -1,8 +1,23 @@
+import data from "../../assets/albums.json";
+
 // CONSTANTS
 // const API_URL = "http://127.0.0.1:8000";
 const API_URL = "https://rex-api-505972842640.europe-west2.run.app";
 
 const THUMBNAIL_BUCKET = "rex-thumbnails";
+
+// ASSETS
+export const ALBUMS: { [key: string]: Album } = data;
+
+interface PhotoInfo {
+  film_stock?: string;
+}
+
+interface Album {
+  name: string;
+  thumbnail: string;
+  photos: { [name: string]: PhotoInfo };
+}
 
 // RESPONSE TYPES
 
