@@ -40,6 +40,21 @@ export const getThumbnailURL = (image_name: string): string => {
 // REQUESTS
 
 /**
+ * Wake's up the API.
+ */
+export async function wakeUp() {
+  try {
+    const response = await fetch(`${API_URL}/`);
+    if (!response.ok) {
+      throw new Error(`api did not wake up!`);
+    }
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+}
+
+/**
  * Fetches a photo from a given album.
  *
  * @param {string} image_name
