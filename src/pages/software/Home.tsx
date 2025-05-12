@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <>
       {/* INTRODUCTION */}
-      <SplitPane left={<About />} right={<></>} />
+      <About />
 
       <HorizontalLine />
 
