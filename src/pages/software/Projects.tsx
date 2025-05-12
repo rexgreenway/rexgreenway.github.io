@@ -21,7 +21,7 @@ export default function Projects() {
             name={repo.name}
             description={repo.description}
             html_url={repo.html_url}
-            language={repo.language}
+            language={repo.language ? repo.language : undefined}
             topics={repo.topics}
             has_pages={repo.has_pages}
           />

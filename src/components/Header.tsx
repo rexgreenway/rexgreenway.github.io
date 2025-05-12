@@ -37,7 +37,7 @@ const Header = ({ homeTitle, navLinks, adjacentLinks }: HeaderProps) => {
             <NavLink
               to={l.path || ""}
               key={l.path}
-              title={capitalize(l.path?.slice(1)!)}
+              title={l.path && capitalize(l.path.slice(1))}
             >
               {l.icon}
             </NavLink>
