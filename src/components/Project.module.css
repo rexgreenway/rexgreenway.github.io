@@ -19,25 +19,6 @@
     gap: 10px;
 }
 
-.Tags {
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-}
-
-
-.Tag {
-    padding: 4px 6px 4px 6px;
-    border-radius: 30px;
-}
-
-.Tag p {
-    text-overflow: ellipsis;
-    font-size: 12px;
-    text-wrap: nowrap;
-}
-
 .ProjectTitle {
     white-space: nowrap;
     overflow: hidden;

@@ -6,7 +6,6 @@ import {
 } from "../../api/gh/fetchProjects";
 
 import Project from "../../components/Project";
-import SplitPane from "../../containers/SplitPane";
 import About from "../../components/About";
 import HorizontalLine from "../../components/HorizontalLine";
 import Spotlight from "../../components/Spotlight";
@@ -26,7 +25,7 @@ export default function Home() {
             name={repo.name}
             description={repo.description}
             html_url={repo.html_url}
-            language={repo.language}
+            language={repo.language ? repo.language : undefined}
             topics={repo.topics}
             has_pages={repo.has_pages}
           />
