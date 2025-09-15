@@ -8,9 +8,51 @@
     transition: ease-in 0.2s;
 }
 
-.Project:hover{
-    transition: ease-in 0.1s;
-    transform: scale(1.03);
+.ProjectHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: var(--text);
+        cursor: pointer;
+    }
+}
+
+/* Icon crossfade for header link */
+.IconLink {
+    display: inline-block;
+}
+
+.IconStack {
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+}
+
+.IconOutlined, .IconFilled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.2s ease;
+}
+
+.IconOutlined {
+    opacity: 1;
+}
+
+.IconFilled {
+    opacity: 0;
+}
+
+.IconLink:hover .IconOutlined {
+    opacity: 0;
+}
+
+.IconLink:hover .IconFilled {
+    opacity: 1;
 }
 
 .Links {
@@ -28,4 +70,12 @@
 .ProjectDescription {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+/* Only hover on mouse not touch screen */
+@media (hover: hover) and (pointer: fine) {
+  .Project:hover {
+    transition: ease-in 0.1s;
+    transform: scale(1.03);
+  }
 }
