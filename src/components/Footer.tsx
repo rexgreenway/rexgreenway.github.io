@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Container from "../containers/Container";
 
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -6,7 +8,6 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import ViewStreamIcon from "@mui/icons-material/ViewStream";
 
 import styles from "./Footer.module.css";
-import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (

@@ -14,3 +14,13 @@ export async function fetchProjects(
   );
   return await response.data;
 }
+
+export type getRepoReadMe =
+  Endpoints["GET /repos/{owner}/{repo}/contents/{path}"]["response"]["data"];
+
+export async function fetchReadMe(repo: string): Promise<getRepoReadMe> {
+  const response = await octokit.request(
+    `GET /repos/RexGreenway/${repo}/contents/README.md`
+  );
+  return await response.data;
+}
