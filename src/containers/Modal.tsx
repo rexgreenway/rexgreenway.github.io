@@ -48,7 +48,9 @@ const ImageModal = ({
     isOpen && (
       <Modal close={close}>
         {!src ? (
-          <CircularProgress className={styles.ImageModal} color="inherit" />
+          <div className={styles.ImageModal}>
+            <CircularProgress color="inherit" />
+          </div>
         ) : src === "FAILED" ? (
           <div className={`${styles.ImageModal} ${styles.Failed}`}>
             Failed to load image.

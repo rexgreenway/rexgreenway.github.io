@@ -32,6 +32,11 @@ const Collection = () => {
       });
   };
 
+  const handleClose = () => {
+    setOpenModal(false);
+    setImageSrc("");
+  };
+
   if (!(collectionId! in ALBUMS) || collectionId === undefined) {
     return <h2>NO SUCH COLLECTION...</h2>;
   }
@@ -56,11 +61,7 @@ const Collection = () => {
         ))}
       </ThumbnailGrid>
 
-      <ImageModal
-        isOpen={openModal}
-        close={() => setOpenModal(false)}
-        src={imageSrc}
-      />
+      <ImageModal isOpen={openModal} close={handleClose} src={imageSrc} />
     </>
   );
 };
