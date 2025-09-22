@@ -20,10 +20,16 @@ const Collection = () => {
   const [imageSrc, setImageSrc] = useState<string>("");
 
   const handleOpen = (image_name: string) => {
-    getPhoto(image_name).then((image) => {
-      setImageSrc(image.url);
-      setOpenModal(true);
-    });
+    // Open modal immediately
+    setOpenModal(true);
+    getPhoto(image_name)
+      .then((image) => {
+        setImageSrc(image.url);
+      })
+      .catch((error) => {
+        console.error("Error fetching image:", error);
+        setImageSrc("FAILED");
+      });
   };
 
   if (!(collectionId! in ALBUMS) || collectionId === undefined) {
