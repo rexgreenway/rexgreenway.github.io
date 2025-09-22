@@ -1,5 +1,6 @@
 import { ReactNode, useEffect } from "react";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import { CircularProgress } from "@mui/material";
 
 import styles from "./Modal.module.css";
 
@@ -39,14 +40,22 @@ const ImageModal = ({
   isOpen,
   close,
 }: {
-  src: string;
+  src?: string;
   isOpen: boolean;
   close: () => void;
 }) => {
   return (
     isOpen && (
       <Modal close={close}>
-        <img className={styles.ImageModal} src={src} />
+        {!src ? (
+          <CircularProgress className={styles.ImageModal} color="inherit" />
+        ) : src === "FAILED" ? (
+          <div className={`${styles.ImageModal} ${styles.Failed}`}>
+            Failed to load image.
+          </div>
+        ) : (
+          <img className={styles.ImageModal} src={src} />
+        )}
       </Modal>
     )
   );
