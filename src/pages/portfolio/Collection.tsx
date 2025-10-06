@@ -49,7 +49,16 @@ const Collection = () => {
         <NavLink to="../" className={styles.Back}>
           {"<- Back"}
         </NavLink>
-        <SectionTitle title={album.name} />
+        <div className={styles.CollectionTitle}>
+          <SectionTitle title={album.name} />
+          {album.film_stock && (
+            <h3>
+              {"{ "}
+              {album.film_stock}
+              {" }"}
+            </h3>
+          )}
+        </div>
       </div>
       <ThumbnailGrid>
         {Object.entries(album.photos).map(([name]) => (

@@ -10,12 +10,14 @@ const THUMBNAIL_BUCKET = "rex-thumbnails";
 export const ALBUMS: { [key: string]: Album } = data;
 
 interface PhotoInfo {
-  film_stock?: string;
+  // alt text for the photo
+  alt?: string;
 }
 
 interface Album {
   name: string;
   thumbnail: string;
+  film_stock?: string;
   photos: { [name: string]: PhotoInfo };
 }
 
