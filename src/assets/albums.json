@@ -1,7 +1,8 @@
 {
   "test-album-1": {
-    "name": "GREECE KENTMERE",
-    "thumbnail": "2023-06-24-OTP-A-kentmere-01.jpg",
+    "name": "Greece 2023 - 1",
+    "thumbnail": "2023-06-24-OTP-A-kentmere-17.jpg",
+    "film_stock": "Kentmere 400",
     "photos": {
       "2023-06-24-OTP-A-kentmere-01.jpg": {},
       "2023-06-24-OTP-A-kentmere-02.jpg": {},
@@ -31,8 +32,9 @@
     }
   },
   "test-album-2": {
-    "name": "GREECE EKTAR",
-    "thumbnail": "2023-06-24-OTP-B-ektar-01.jpg",
+    "name": "Greece 2023 - 2",
+    "thumbnail": "2023-06-24-OTP-B-ektar-10.jpg",
+    "film_stock": "Kodak Ektar 100",
     "photos": {
       "2023-06-24-OTP-B-ektar-02.jpg": {},
       "2023-06-24-OTP-B-ektar-01.jpg": {},
@@ -74,8 +76,9 @@
     }
   },
   "test-album-3": {
-    "name": "SA 1 ULTRAMAX",
-    "thumbnail": "2023-09-06-OTP-A-ultramax-01.jpg",
+    "name": "South America 2023 - 1",
+    "thumbnail": "2023-09-06-OTP-A-ultramax-23.jpg",
+    "film_stock": "Kodak Ultramax 400",
     "photos": {
       "2023-09-06-OTP-A-ultramax-01.jpg": {},
       "2023-09-06-OTP-A-ultramax-02.jpg": {},
@@ -119,8 +122,9 @@
     }
   },
   "test-album-4": {
-    "name": "SA 2 ULTRAMAX",
-    "thumbnail": "2023-09-06-OTP-B-ultramax-01.jpg",
+    "name": "South America 2023 - 2",
+    "thumbnail": "2023-09-06-OTP-B-ultramax-26.jpg",
+    "film_stock": "Kodak Ultramax 400",
     "photos": {
       "2023-09-06-OTP-B-ultramax-01.jpg": {},
       "2023-09-06-OTP-B-ultramax-02.jpg": {},
@@ -164,8 +168,9 @@
     }
   },
   "test-album-5": {
-    "name": "SA 3 EKTAR",
-    "thumbnail": "2023-09-06-OTP-C-ektar-01.jpg",
+    "name": "South America 2023 - 3",
+    "thumbnail": "2023-09-06-OTP-C-ektar-15.jpg",
+    "film_stock": "Kodak Ektar 100",
     "photos": {
       "2023-09-06-OTP-C-ektar-01.jpg": {},
       "2023-09-06-OTP-C-ektar-02.jpg": {},
@@ -209,8 +214,9 @@
     }
   },
   "test-album-6": {
-    "name": "SA 4 LOMO",
-    "thumbnail": "2023-09-06-OTP-D-lomo-01.jpg",
+    "name": "South America 2023 - 4",
+    "thumbnail": "2023-09-06-OTP-D-lomo-11.jpg",
+    "film_stock": "Lomo Purple",
     "photos": {
       "2023-09-06-OTP-D-lomo-01.jpg": {},
       "2023-09-06-OTP-D-lomo-02.jpg": {},
@@ -253,8 +259,9 @@
     }
   },
   "test-album-7": {
-    "name": "SA 5 PORTRA",
-    "thumbnail": "2023-09-06-OTP-E-portra-400-01.jpg",
+    "name": "South America 2023 - 5",
+    "thumbnail": "2023-09-06-OTP-E-portra-400-04.jpg",
+    "film_stock": "Kodak Portra 400",
     "photos": {
       "2023-09-06-OTP-E-portra-400-01.jpg": {},
       "2023-09-06-OTP-E-portra-400-02.jpg": {},
@@ -298,8 +305,9 @@
     }
   },
   "test-album-8": {
-    "name": "WRESTLING",
-    "thumbnail": "2023-10-14-OTP-A-kentmere-01.jpg",
+    "name": "Wrestling",
+    "thumbnail": "2023-10-14-OTP-A-kentmere-03.jpg",
+    "film_stock": "Kentmere 400",
     "photos": {
       "2023-10-14-OTP-A-kentmere-01.jpg": {},
       "2023-10-14-OTP-A-kentmere-02.jpg": {},
@@ -331,8 +339,9 @@
     }
   },
   "test-album-9": {
-    "name": "LA 1 KONO",
-    "thumbnail": "2024-02-22-OTP-A-kono-monsoon-01.jpg",
+    "name": "Los Angeles 2024 - 1",
+    "thumbnail": "2024-02-22-OTP-A-kono-monsoon-15.jpg",
+    "film_stock": "Kono! Monsoon",
     "photos": {
       "2024-02-22-OTP-A-kono-monsoon-01.jpg": {},
       "2024-02-22-OTP-A-kono-monsoon-02.jpg": {},
@@ -376,8 +385,9 @@
     }
   },
   "test-album-10": {
-    "name": "LA 2 GOLD",
-    "thumbnail": "2024-02-22-OTP-B-gold-01.jpg",
+    "name": "Los Angeles 2024 - 2",
+    "thumbnail": "2024-02-22-OTP-B-gold-21.jpg",
+    "film_stock": "Kodak Gold 200",
     "photos": {
       "2024-02-22-OTP-B-gold-01.jpg": {},
       "2024-02-22-OTP-B-gold-02.jpg": {},
@@ -421,8 +431,9 @@
     }
   },
   "test-album-11": {
-    "name": "LA 3 PORTRA",
-    "thumbnail": "2024-02-22-OTP-C-portra-160-01.jpg",
+    "name": "Los Angeles 2024 - 3",
+    "thumbnail": "2024-02-22-OTP-C-portra-160-36.jpg",
+    "film_stock": "Kodak Portra 160",
     "photos": {
       "2024-02-22-OTP-C-portra-160-01.jpg": {},
       "2024-02-22-OTP-C-portra-160-02.jpg": {},
@@ -467,8 +478,9 @@
     }
   },
   "test-album-12": {
-    "name": "MALTA-KEW",
-    "thumbnail": "2024-06-21-OTP-A-kentmere-01.jpg",
+    "name": "Malta & Kew Gardens",
+    "thumbnail": "2024-06-21-OTP-A-kentmere-25.jpg",
+    "film_stock": "Kentmere 400",
     "photos": {
       "2024-06-21-OTP-A-kentmere-01.jpg": {},
       "2024-06-21-OTP-A-kentmere-02.jpg": {},
@@ -499,8 +511,9 @@
     }
   },
   "test-album-13": {
-    "name": "CROATIA EKTAR",
-    "thumbnail": "2024-06-28-OTP-A-ektar-01.jpg",
+    "name": "Croatia 2024 - 1",
+    "thumbnail": "2024-06-28-OTP-A-ektar-16.jpg",
+    "film_stock": "Kodak Ektar 100",
     "photos": {
       "2024-06-28-OTP-A-ektar-01.jpg": {},
       "2024-06-28-OTP-A-ektar-02.jpg": {},
@@ -544,8 +557,9 @@
     }
   },
   "test-album-14": {
-    "name": "CROATIA KONO ART 2",
-    "thumbnail": "2024-08-26-OTP-A-kono-art-2-400-01.jpg",
+    "name": "Croatia 2024 - 2",
+    "thumbnail": "2024-08-26-OTP-A-kono-art-2-400-07.jpg",
+    "film_stock": "Kono! Delight Art II 400",
     "photos": {
       "2024-08-26-OTP-A-kono-art-2-400-01.jpg": {},
       "2024-08-26-OTP-A-kono-art-2-400-02.jpg": {},
@@ -590,8 +604,9 @@
     }
   },
   "test-album-15": {
-    "name": "REGATTA HARMAN",
-    "thumbnail": "2024-08-26-OTP-B-harman-400-01.jpg",
+    "name": "Appledore Regatta",
+    "thumbnail": "2024-08-26-OTP-B-harman-400-11.jpg",
+    "film_stock": "Harman Pheonix (I) 200 ",
     "photos": {
       "2024-08-26-OTP-B-harman-400-01.jpg": {},
       "2024-08-26-OTP-B-harman-400-02.jpg": {},
@@ -635,8 +650,9 @@
     }
   },
   "test-album-16": {
-    "name": "NEW CAMERA GOLD",
-    "thumbnail": "2024-10-09-NFM-A-gold-01.jpg",
+    "name": "Nikon FM Test Roll",
+    "thumbnail": "2024-10-09-NFM-A-gold-02.jpg",
+    "film_stock": "Kodak Gold 200",
     "photos": {
       "2024-10-09-NFM-A-gold-01.jpg": {},
       "2024-10-09-NFM-A-gold-02.jpg": {},
@@ -679,8 +695,9 @@
     }
   },
   "test-album-17": {
-    "name": "BRIGHTON TMAX",
+    "name": "Brighton 2024",
     "thumbnail": "2024-10-09-OTP-A-tmax-01.jpg",
+    "film_stock": "Kodak TMAX 100",
     "photos": {
       "2024-10-09-OTP-A-tmax-01.jpg": {},
       "2024-10-09-OTP-A-tmax-02.jpg": {},
@@ -723,8 +740,9 @@
     }
   },
   "test-album-18": {
-    "name": "EXPIRED KONICA",
-    "thumbnail": "2024-11-07-NFM-A-konica-expired-01.jpg",
+    "name": "London Winter 2024 - 1",
+    "thumbnail": "2024-11-07-NFM-A-konica-expired-29.jpg",
+    "film_stock": "Konica (expired)",
     "photos": {
       "2024-11-07-NFM-A-konica-expired-01.jpg": {},
       "2024-11-07-NFM-A-konica-expired-02.jpg": {},
@@ -766,9 +784,99 @@
       "2024-11-07-NFM-A-konica-expired-38.jpg": {}
     }
   },
+  "test-album-20": {
+    "name": "London Winter 2024 - 2",
+    "thumbnail": "2025-03-26-NFM-A-portra-400-23.jpg",
+    "film_stock": "Kodak Portra 400",
+    "photos": {
+      "2025-03-26-NFM-A-portra-400-01.jpg": {},
+      "2025-03-26-NFM-A-portra-400-02.jpg": {},
+      "2025-03-26-NFM-A-portra-400-03.jpg": {},
+      "2025-03-26-NFM-A-portra-400-04.jpg": {},
+      "2025-03-26-NFM-A-portra-400-05.jpg": {},
+      "2025-03-26-NFM-A-portra-400-06.jpg": {},
+      "2025-03-26-NFM-A-portra-400-07.jpg": {},
+      "2025-03-26-NFM-A-portra-400-08.jpg": {},
+      "2025-03-26-NFM-A-portra-400-09.jpg": {},
+      "2025-03-26-NFM-A-portra-400-10.jpg": {},
+      "2025-03-26-NFM-A-portra-400-11.jpg": {},
+      "2025-03-26-NFM-A-portra-400-12.jpg": {},
+      "2025-03-26-NFM-A-portra-400-13.jpg": {},
+      "2025-03-26-NFM-A-portra-400-14.jpg": {},
+      "2025-03-26-NFM-A-portra-400-15.jpg": {},
+      "2025-03-26-NFM-A-portra-400-16.jpg": {},
+      "2025-03-26-NFM-A-portra-400-17.jpg": {},
+      "2025-03-26-NFM-A-portra-400-18.jpg": {},
+      "2025-03-26-NFM-A-portra-400-19.jpg": {},
+      "2025-03-26-NFM-A-portra-400-20.jpg": {},
+      "2025-03-26-NFM-A-portra-400-21.jpg": {},
+      "2025-03-26-NFM-A-portra-400-22.jpg": {},
+      "2025-03-26-NFM-A-portra-400-23.jpg": {},
+      "2025-03-26-NFM-A-portra-400-24.jpg": {},
+      "2025-03-26-NFM-A-portra-400-25.jpg": {},
+      "2025-03-26-NFM-A-portra-400-26.jpg": {},
+      "2025-03-26-NFM-A-portra-400-27.jpg": {},
+      "2025-03-26-NFM-A-portra-400-28.jpg": {},
+      "2025-03-26-NFM-A-portra-400-29.jpg": {},
+      "2025-03-26-NFM-A-portra-400-30.jpg": {},
+      "2025-03-26-NFM-A-portra-400-31.jpg": {},
+      "2025-03-26-NFM-A-portra-400-32.jpg": {},
+      "2025-03-26-NFM-A-portra-400-33.jpg": {},
+      "2025-03-26-NFM-A-portra-400-34.jpg": {},
+      "2025-03-26-NFM-A-portra-400-35.jpg": {},
+      "2025-03-26-NFM-A-portra-400-36.jpg": {},
+      "2025-03-26-NFM-A-portra-400-37.jpg": {},
+      "2025-03-26-NFM-A-portra-400-38.jpg": {}
+    }
+  },
+  "test-album-22": {
+    "name": "London Winter 2024 - 3",
+    "thumbnail": "2025-03-26-OTP-A-fuji-expired-20.jpg",
+    "film_stock": "Fujifilm (expired)",
+    "photos": {
+      "2025-03-26-OTP-A-fuji-expired-01.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-02.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-03.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-04.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-05.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-06.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-07.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-08.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-09.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-10.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-11.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-12.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-13.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-14.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-15.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-16.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-17.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-18.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-19.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-20.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-21.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-22.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-23.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-24.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-25.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-26.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-27.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-28.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-29.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-30.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-31.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-32.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-33.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-34.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-35.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-36.jpg": {},
+      "2025-03-26-OTP-A-fuji-expired-37.jpg": {}
+    }
+  },
   "test-album-19": {
-    "name": "BEACH XP2",
-    "thumbnail": "2025-01-30-OTP-A-xp2-01.jpg",
+    "name": "Westward Ho!",
+    "thumbnail": "2025-01-30-OTP-A-xp2-38.jpg",
+    "film_stock": "Ilford XP2 Super",
     "photos": {
       "2025-01-30-OTP-A-xp2-01.jpg": {},
       "2025-01-30-OTP-A-xp2-02.jpg": {},
@@ -812,53 +920,10 @@
       "2025-01-30-OTP-A-xp2-40.jpg": {}
     }
   },
-  "test-album-20": {
-    "name": "LONDON PORTRA",
-    "thumbnail": "2025-03-26-NFM-A-portra-400-01.jpg",
-    "photos": {
-      "2025-03-26-NFM-A-portra-400-01.jpg": {},
-      "2025-03-26-NFM-A-portra-400-02.jpg": {},
-      "2025-03-26-NFM-A-portra-400-03.jpg": {},
-      "2025-03-26-NFM-A-portra-400-04.jpg": {},
-      "2025-03-26-NFM-A-portra-400-05.jpg": {},
-      "2025-03-26-NFM-A-portra-400-06.jpg": {},
-      "2025-03-26-NFM-A-portra-400-07.jpg": {},
-      "2025-03-26-NFM-A-portra-400-08.jpg": {},
-      "2025-03-26-NFM-A-portra-400-09.jpg": {},
-      "2025-03-26-NFM-A-portra-400-10.jpg": {},
-      "2025-03-26-NFM-A-portra-400-11.jpg": {},
-      "2025-03-26-NFM-A-portra-400-12.jpg": {},
-      "2025-03-26-NFM-A-portra-400-13.jpg": {},
-      "2025-03-26-NFM-A-portra-400-14.jpg": {},
-      "2025-03-26-NFM-A-portra-400-15.jpg": {},
-      "2025-03-26-NFM-A-portra-400-16.jpg": {},
-      "2025-03-26-NFM-A-portra-400-17.jpg": {},
-      "2025-03-26-NFM-A-portra-400-18.jpg": {},
-      "2025-03-26-NFM-A-portra-400-19.jpg": {},
-      "2025-03-26-NFM-A-portra-400-20.jpg": {},
-      "2025-03-26-NFM-A-portra-400-21.jpg": {},
-      "2025-03-26-NFM-A-portra-400-22.jpg": {},
-      "2025-03-26-NFM-A-portra-400-23.jpg": {},
-      "2025-03-26-NFM-A-portra-400-24.jpg": {},
-      "2025-03-26-NFM-A-portra-400-25.jpg": {},
-      "2025-03-26-NFM-A-portra-400-26.jpg": {},
-      "2025-03-26-NFM-A-portra-400-27.jpg": {},
-      "2025-03-26-NFM-A-portra-400-28.jpg": {},
-      "2025-03-26-NFM-A-portra-400-29.jpg": {},
-      "2025-03-26-NFM-A-portra-400-30.jpg": {},
-      "2025-03-26-NFM-A-portra-400-31.jpg": {},
-      "2025-03-26-NFM-A-portra-400-32.jpg": {},
-      "2025-03-26-NFM-A-portra-400-33.jpg": {},
-      "2025-03-26-NFM-A-portra-400-34.jpg": {},
-      "2025-03-26-NFM-A-portra-400-35.jpg": {},
-      "2025-03-26-NFM-A-portra-400-36.jpg": {},
-      "2025-03-26-NFM-A-portra-400-37.jpg": {},
-      "2025-03-26-NFM-A-portra-400-38.jpg": {}
-    }
-  },
   "test-album-21": {
-    "name": "THAILAND GOLD",
-    "thumbnail": "2025-03-26-NFM-B-gold-01.jpg",
+    "name": "Thailand 2025 - 1",
+    "thumbnail": "2025-03-26-NFM-B-gold-18.jpg",
+    "film_stock": "Kodak Gold 200",
     "photos": {
       "2025-03-26-NFM-B-gold-01.jpg": {},
       "2025-03-26-NFM-B-gold-02.jpg": {},
@@ -898,52 +963,10 @@
       "2025-03-26-NFM-B-gold-36.jpg": {}
     }
   },
-  "test-album-22": {
-    "name": "LONDON EXPIRED",
-    "thumbnail": "2025-03-26-OTP-A-fuji-expired-01.jpg",
-    "photos": {
-      "2025-03-26-OTP-A-fuji-expired-01.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-02.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-03.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-04.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-05.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-06.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-07.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-08.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-09.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-10.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-11.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-12.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-13.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-14.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-15.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-16.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-17.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-18.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-19.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-20.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-21.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-22.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-23.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-24.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-25.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-26.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-27.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-28.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-29.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-30.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-31.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-32.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-33.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-34.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-35.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-36.jpg": {},
-      "2025-03-26-OTP-A-fuji-expired-37.jpg": {}
-    }
-  },
   "test-album-23": {
-    "name": "THAILAND XP2",
-    "thumbnail": "2025-03-26-OTP-B-xp2-01.jpg",
+    "name": "Thailand 2025 - 2",
+    "thumbnail": "2025-03-26-OTP-B-xp2-08.jpg",
+    "film_stock": "Ilford XP2 Super",
     "photos": {
       "2025-03-26-OTP-B-xp2-01.jpg": {},
       "2025-03-26-OTP-B-xp2-02.jpg": {},
@@ -986,8 +1009,9 @@
     }
   },
   "test-album-24": {
-    "name": "THAILAND EKTAR",
-    "thumbnail": "2025-04-23-NFM-A-ektar-01.jpg",
+    "name": "Thailand 2025 - 3",
+    "thumbnail": "2025-04-23-NFM-A-ektar-21.jpg",
+    "film_stock": "Kodak Ektar 100",
     "photos": {
       "2025-04-23-NFM-A-ektar-01.jpg": {},
       "2025-04-23-NFM-A-ektar-02.jpg": {},
@@ -1029,8 +1053,9 @@
     }
   },
   "test-album-25": {
-    "name": "THAILAND HP5",
-    "thumbnail": "2025-04-23-OTP-A-hp5-01.jpg",
+    "name": "Thailand 2025 - 4",
+    "thumbnail": "2025-04-23-OTP-A-hp5-02.jpg",
+    "film_stock": "Ilford HP5 Plus",
     "photos": {
       "2025-04-23-OTP-A-hp5-01.jpg": {},
       "2025-04-23-OTP-A-hp5-02.jpg": {},
@@ -1071,8 +1096,9 @@
     }
   },
   "test-album-26": {
-    "name": "VISITING HOME FUJI 400",
-    "thumbnail": "2025-05-29-NFM-A-fuji-400-01.jpg",
+    "name": "Visiting Home 2025 - 1",
+    "thumbnail": "2025-05-29-NFM-A-fuji-400-31.jpg",
+    "film_stock": "Fujifilm 400",
     "photos": {
       "2025-05-29-NFM-A-fuji-400-01.jpg": {},
       "2025-05-29-NFM-A-fuji-400-02.jpg": {},
@@ -1113,8 +1139,9 @@
     }
   },
   "test-album-27": {
-    "name": "VISITING HOME VIBE B&W 400",
-    "thumbnail": "2025-05-29-OTP-A-vibe-bw-400-01.jpg",
+    "name": "Visiting Home 2025 - 2",
+    "thumbnail": "2025-05-29-OTP-A-vibe-bw-400-19.jpg",
+    "film_stock": "Vibe B&W 400",
     "photos": {
       "2025-05-29-OTP-A-vibe-bw-400-01.jpg": {},
       "2025-05-29-OTP-A-vibe-bw-400-02.jpg": {},
@@ -1156,8 +1183,9 @@
     }
   },
   "test-album-28": {
-    "name": "DEVON, ALICE, & REBEKAH",
-    "thumbnail": "2025-06-25-OTP-A-portra-160-01.jpg",
+    "name": "Alice's First Birthday",
+    "thumbnail": "2025-06-25-OTP-A-portra-160-23.jpg",
+    "film_stock": "Kodak Portra 160",
     "photos": {
       "2025-06-25-OTP-A-portra-160-01.jpg": {},
       "2025-06-25-OTP-A-portra-160-02.jpg": {},
@@ -1201,8 +1229,9 @@
     }
   },
   "test-album-29": {
-    "name": "GLASTONBURY 1",
-    "thumbnail": "2025-07-04-OTP-A-ultramax-01.jpg",
+    "name": "Glastonbury 2025 - 1",
+    "thumbnail": "2025-07-04-OTP-A-ultramax-25.jpg",
+    "film_stock": "Kodak Ultramax 400",
     "photos": {
       "2025-07-04-OTP-A-ultramax-01.jpg": {},
       "2025-07-04-OTP-A-ultramax-02.jpg": {},
@@ -1246,8 +1275,9 @@
     }
   },
   "test-album-30": {
-    "name": "GLASTONBURY 2",
+    "name": "Glastonbury 2025 - 2",
     "thumbnail": "2025-07-04-OTP-B-xp2-01.jpg",
+    "film_stock": "Ilford XP2 Super",
     "photos": {
       "2025-07-04-OTP-B-xp2-01.jpg": {},
       "2025-07-04-OTP-B-xp2-02.jpg": {},
@@ -1288,8 +1318,9 @@
     }
   },
   "test-album-31": {
-    "name": "GLASTONBURY 3",
-    "thumbnail": "2025-07-04-OTP-C-ultramax-01.jpg",
+    "name": "Glastonbury 2025 - 3",
+    "thumbnail": "2025-07-04-OTP-C-ultramax-03.jpg",
+    "film_stock": "Kodak Ultramax 400",
     "photos": {
       "2025-07-04-OTP-C-ultramax-01.jpg": {},
       "2025-07-04-OTP-C-ultramax-02.jpg": {},
@@ -1313,8 +1344,9 @@
     }
   },
   "test-album-32": {
-    "name": "Post Summer 1",
-    "thumbnail": "2025-10-06-NFM-A-ektar-01.jpg",
+    "name": "Post Summer 2025 - 1",
+    "thumbnail": "2025-10-06-NFM-A-ektar-09.jpg",
+    "film_stock": "Kodak Ektar 100",
     "photos": {
       "2025-10-06-NFM-A-ektar-01.jpg": {},
       "2025-10-06-NFM-A-ektar-02.jpg": {},
@@ -1357,8 +1389,9 @@
     }
   },
   "test-album-33": {
-    "name": "Post Summer 2",
-    "thumbnail": "2025-10-06-NFM-B-kono-art-100-01.jpg",
+    "name": "Post Summer 2025 - 2",
+    "thumbnail": "2025-10-06-NFM-B-kono-art-100-15.jpg",
+    "film_stock": "Kono! Delight Art 100",
     "photos": {
       "2025-10-06-NFM-B-kono-art-100-01.jpg": {},
       "2025-10-06-NFM-B-kono-art-100-02.jpg": {},
@@ -1401,8 +1434,9 @@
     }
   },
   "test-album-34": {
-    "name": "Post Summer 3",
-    "thumbnail": "2025-10-06-OTP-A-xp2-01.jpg",
+    "name": "Post Summer 2025 - 3",
+    "thumbnail": "2025-10-06-OTP-A-xp2-31.jpg",
+    "film_stock": "Ilford XP2 Super",
     "photos": {
       "2025-10-06-OTP-A-xp2-01.jpg": {},
       "2025-10-06-OTP-A-xp2-02.jpg": {},
