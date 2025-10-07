@@ -1,30 +1,23 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import {
-  ALBUMS,
-  getThumbnailURL,
-  wakeUp,
-} from "../../api/rex-api/fetchPhotography";
+import headerImg from "../../assets/portfolio-header.jpg";
 
-import { Thumbnail, ThumbnailGrid } from "../../containers/Thumbnail";
+import styles from "./Photography.module.css";
+import Photo from "../../components/Photo";
 
 const Photography = () => {
-  const navigate = useNavigate();
-
-  // Call API to wake up on navigation to Portfolio Page.
-  wakeUp();
-
   return (
-    <ThumbnailGrid>
-      {Object.entries(ALBUMS).map(([key, album]) => (
-        <Thumbnail
-          key={key}
-          imageSrc={getThumbnailURL(album.thumbnail)}
-          title={album.name}
-          onClick={() => navigate(key)}
-        />
-      ))}
-    </ThumbnailGrid>
+    <div className={styles.Photography}>
+      <Photo
+        src={headerImg}
+        description="Portstewart Photographer, Rex Greenway © 2025"
+        alt="featured image of photographer on a stormy hill overlooking the sea"
+        className={styles.HeaderPhoto}
+      />
+      <h4>
+        Photography Archive can be found <NavLink to="./archive">here</NavLink>
+      </h4>
+    </div>
   );
 };
 

@@ -1,7 +1,9 @@
 import { RouteObject } from "react-router-dom";
 
-import App from "./App";
 import { Theme } from "./Theme";
+
+// App Layouts
+import App, { PortfolioApp } from "./App";
 
 // Icons
 import CameraRollIcon from "@mui/icons-material/CameraRoll";
@@ -15,6 +17,7 @@ import AboutPage from "../pages/software/About";
 import Photography from "../pages/portfolio/Photography";
 import CollectionPage from "../pages/portfolio/Collection";
 import Links from "../pages/links/Links";
+import Archive from "../pages/portfolio/Archive";
 
 // Extended Route Type
 export type CustomRouteObject = RouteObject & {
@@ -44,7 +47,7 @@ const softwareRoutes: CustomRouteObject = {
 
 const portfolioRoutes: CustomRouteObject = {
   path: "/portfolio",
-  element: <App homeTitle="photography" theme={Theme.Light} />,
+  element: <PortfolioApp homeTitle="photography" theme={Theme.Light} />,
   icon: <CameraRollIcon />,
   children: [
     {
@@ -52,8 +55,17 @@ const portfolioRoutes: CustomRouteObject = {
       element: <Photography />,
     },
     {
-      path: ":collectionId",
-      element: <CollectionPage />,
+      path: "archive",
+      children: [
+        {
+          index: true,
+          element: <Archive />,
+        },
+        {
+          path: ":collectionId",
+          element: <CollectionPage />,
+        },
+      ],
     },
   ],
 };

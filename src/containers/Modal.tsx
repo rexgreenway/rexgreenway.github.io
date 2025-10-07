@@ -2,6 +2,8 @@ import { ReactNode, useEffect } from "react";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { CircularProgress } from "@mui/material";
 
+import Photo from "../components/Photo";
+
 import styles from "./Modal.module.css";
 
 interface ModalProps {
@@ -56,7 +58,7 @@ const ImageModal = ({
             Failed to load image.
           </div>
         ) : (
-          <img className={styles.ImageModal} src={src} />
+          <Photo src={src} className={styles.ImageModal} />
         )}
       </Modal>
     )

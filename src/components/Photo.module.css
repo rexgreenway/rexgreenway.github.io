@@ -1,0 +1,18 @@
+.Photo {
+  position: relative;
+  display: inline-block;
+}
+
+.Description {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 10px;
+  border-radius: 4px;
+  max-width: 70%;
+  backdrop-filter: blur(2px);
+}
