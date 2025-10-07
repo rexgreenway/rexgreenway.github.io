@@ -7,10 +7,14 @@ const Photo = ({
   className,
 }: {
   src: string;
-  alt: string;
+  alt?: string;
   description?: string;
   className?: string;
 }) => {
+  if (!description) {
+    description = `Rex Greenway © ${new Date().getFullYear()}`;
+  }
+
   return (
     <div className={styles.Photo}>
       <img src={src} alt={alt} className={className} />
