@@ -1,5 +1,8 @@
+import { useEffect } from "react";
 import { Outlet, useLocation, useNavigation } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
+
+import { wakeUp } from "../api/rex-api/fetchPhotography";
 
 import setTheme, { Theme } from "./Theme";
 
@@ -67,6 +70,21 @@ const App = ({ homeTitle = "home", theme, simple }: AppProps) => {
       </div>
     );
   }
+};
+
+export const PortfolioApp = ({
+  homeTitle = "photography",
+  theme,
+  simple,
+}: AppProps) => {
+  const location = useLocation();
+
+  // Call on every route change under /portfolio
+  useEffect(() => {
+    wakeUp();
+  }, [location.pathname]);
+
+  return <App homeTitle={homeTitle} theme={theme} simple={simple} />;
 };
 
 export default App;

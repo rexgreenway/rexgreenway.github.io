@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 
-import {
-  ALBUMS,
-  getPhoto,
-  getThumbnailURL,
-} from "../../api/rex-api/fetchPhotography";
+import { ALBUMS } from "../../api/rex-api/loadAlbums";
+import { getPhoto, getThumbnailURL } from "../../api/rex-api/fetchPhotography";
 
 import SectionTitle from "../../components/SectionTitle";
 import { Thumbnail, ThumbnailGrid } from "../../containers/Thumbnail";
@@ -46,7 +43,7 @@ const Collection = () => {
   return (
     <>
       <div className={styles.CollectionHeader}>
-        <NavLink to="../" className={styles.Back}>
+        <NavLink to=".." className={styles.Back}>
           {"<- Back"}
         </NavLink>
         <div className={styles.CollectionTitle}>
