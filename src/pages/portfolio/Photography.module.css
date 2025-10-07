@@ -1,0 +1,13 @@
+.Photography {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.HeaderPhoto {
+  width: 100%;
+  height: 62vh;
+  object-fit: cover;
+  object-position: 10% 50%;
+}
