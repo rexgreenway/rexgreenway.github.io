@@ -12,7 +12,7 @@
   z-index: 2;
 }
 
-.Model {
+.Modal {
   max-height: 80%;
   max-width: 80%;
   display: flex;
