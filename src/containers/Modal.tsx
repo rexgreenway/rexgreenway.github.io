@@ -32,7 +32,7 @@ const Modal = ({ close, children }: ModalProps) => {
         className={styles.CloseButton}
         onClick={close}
       />
-      <div className={styles.Model}>{children}</div>
+      <div className={styles.Modal}>{children}</div>
     </div>
   );
 };
