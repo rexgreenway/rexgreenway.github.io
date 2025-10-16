@@ -19,8 +19,6 @@
   
   text-decoration: none;
   color: var(--text);
-
-  padding-right: 40px;
   
   display: flex;
   justify-content: flex-end;
@@ -36,11 +34,19 @@
   gap: 20px;
 
   align-items: center;
+
+  margin-right: 8%;
 }
 
 
 @media only screen and (max-width: 600px) {
   .Subtitle {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .Tile {
+    font-size: small;
   }
 }

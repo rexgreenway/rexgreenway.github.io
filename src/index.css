@@ -25,6 +25,9 @@
 }
 
 body {
+    margin:0;
+    padding:0;    
+    
     background-color:  var(--background);
     
     font-family: 'Bebas Neue', monospace;
@@ -36,7 +39,10 @@ body {
 }
 
 #root {
-    margin: 20px 10% 20px 10%
+    /* Center the root element */
+    margin: 0 auto; 
+    /* Keeps content centered on wider screens */
+    max-width: min(90vw, 80em);
 }
 
 p, h1, h2, h3, h4, h5 {

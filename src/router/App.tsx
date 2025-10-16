@@ -41,7 +41,7 @@ const App = ({ homeTitle = "home", theme, simple }: AppProps) => {
 
   if (simple) {
     return (
-      <div className={styles.LayoutSimple}>
+      <div id="layoutSimple" className={styles.Layout}>
         <SimpleHeader />
         <Outlet />
         <Footer />
@@ -49,8 +49,8 @@ const App = ({ homeTitle = "home", theme, simple }: AppProps) => {
     );
   } else {
     return (
-      <div className={styles.Layout}>
-        <div>
+      <div id="layout" className={styles.Layout}>
+        <div id="headerWithLine">
           <Header
             homeTitle={homeTitle}
             navLinks={subRoute}
@@ -63,7 +63,7 @@ const App = ({ homeTitle = "home", theme, simple }: AppProps) => {
         ) : (
           <Outlet />
         )}
-        <div>
+        <div id="footerWithLine">
           <HorizontalLine />
           <Footer />
         </div>
