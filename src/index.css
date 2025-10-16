@@ -39,7 +39,9 @@ body {
 }
 
 #root {
-    margin: 20px auto;
+    /* Center the root element */
+    margin: 0 auto; 
+    /* Keeps content centered on wider screens */
     max-width: min(90vw, 80em);
 }
 
