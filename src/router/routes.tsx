@@ -16,7 +16,6 @@ import AboutPage from "../pages/software/About";
 
 import Photography from "../pages/portfolio/Photography";
 import CollectionPage from "../pages/portfolio/Collection";
-import Links from "../pages/links/Links";
 import Archive from "../pages/portfolio/Archive";
 
 // Extended Route Type
@@ -70,18 +69,7 @@ const portfolioRoutes: CustomRouteObject = {
   ],
 };
 
-const linkRoutes: CustomRouteObject = {
-  path: "/links",
-  element: <App homeTitle="links" simple={true} />,
-  children: [
-    {
-      index: true,
-      element: <Links />,
-    },
-  ],
-};
-
 // 1st element is the default home page
-const routes = [linkRoutes, softwareRoutes, portfolioRoutes];
+const routes = [softwareRoutes, portfolioRoutes];
 
 export default routes;
