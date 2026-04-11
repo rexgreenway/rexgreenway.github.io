@@ -1,5 +1,5 @@
 import { PDFLink } from "../../components/CustomLinks";
-import HorizontalLine from "../../components/HorizontalLine";
+import { HorizontalLine } from "../../components/elements";
 import Container from "../../containers/Container";
 
 import PDF from "../../documents/2024-06-01-CV.pdf";

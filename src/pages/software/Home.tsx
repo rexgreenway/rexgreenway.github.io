@@ -4,7 +4,7 @@ import { fetchProjects, listUserReposResponseData } from "../../api/gh/api";
 
 import Project from "../../components/Project";
 import About from "../../components/About";
-import HorizontalLine from "../../components/HorizontalLine";
+import { HorizontalLine } from "../../components/elements";
 import Spotlight from "../../components/Spotlight";
 import SectionTitle from "../../components/SectionTitle";
 import { CentredFlex } from "../../containers/CardContainers";
@@ -26,7 +26,7 @@ export default function Home() {
             topics={repo.topics}
             has_pages={repo.has_pages}
           />
-        ))
+        )),
       );
     });
   }, []);

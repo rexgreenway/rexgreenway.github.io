@@ -1,6 +1,6 @@
 import { RouteObject } from "react-router-dom";
 
-import { Theme } from "./Theme";
+import { DARK_THEME, LIGHT_THEME } from "@contexts";
 
 // App Layouts
 import App, { PortfolioApp } from "./App";
@@ -26,7 +26,7 @@ export type CustomRouteObject = RouteObject & {
 // ROUTES
 const softwareRoutes: CustomRouteObject = {
   path: "/software",
-  element: <App theme={Theme.Dark} />,
+  element: <App theme={DARK_THEME} />,
   icon: <TerminalIcon />,
   children: [
     {
@@ -46,7 +46,7 @@ const softwareRoutes: CustomRouteObject = {
 
 const portfolioRoutes: CustomRouteObject = {
   path: "/portfolio",
-  element: <PortfolioApp homeTitle="photography" theme={Theme.Light} />,
+  element: <PortfolioApp homeTitle="photography" theme={LIGHT_THEME} />,
   icon: <CameraRollIcon />,
   children: [
     {
