@@ -4,11 +4,11 @@ import { CircularProgress } from "@mui/material";
 
 import { wakeUp } from "../api/rex-api/fetchPhotography";
 
-import setTheme, { Theme } from "./Theme";
+import { useTheme, Theme } from "@contexts";
 
 import Header, { SimpleHeader } from "../components/Header";
 import Footer from "../components/Footer";
-import HorizontalLine from "../components/HorizontalLine";
+import { HorizontalLine } from "../components/elements";
 
 import routes from "./routes";
 
@@ -26,7 +26,7 @@ const App = ({ homeTitle = "home", theme, simple }: AppProps) => {
 
   // Get sub routes of current location
   const subRoute = routes.find(
-    (route) => route.path && location.pathname.startsWith(route.path)
+    (route) => route.path && location.pathname.startsWith(route.path),
   );
 
   // Filter for other top level routes (i.e. the adjacent pages)
@@ -35,7 +35,12 @@ const App = ({ homeTitle = "home", theme, simple }: AppProps) => {
   });
 
   // Set Theme
-  setTheme(theme);
+  const { theme: contextTheme, toggleTheme } = useTheme();
+  useEffect(() => {
+    if (contextTheme != theme) {
+      toggleTheme();
+    }
+  }, [theme]);
 
   const navigation = useNavigation();
 

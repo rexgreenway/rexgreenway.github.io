@@ -1,15 +1,15 @@
 import { GitHub, Instagram, LinkedIn, ViewStream } from "@mui/icons-material";
 
 import Container from "../containers/Container";
+import { ToggleThemeButton } from "./elements";
 
 import styles from "./Footer.module.css";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <Container id="footer" className={styles.Footer}>
-      <a href="https://rexgreenway.github.io/">
-        Website designed and maintained by Rex Greenway
-      </a>
+      <ToggleThemeButton />
+      <p className={styles.Credits}>Designed and maintained by Rex Greenway</p>
       <div className={styles.Links}>
         <a href="https://links.rexgreenway.me">
           <ViewStream className={styles.Link} />
@@ -26,4 +26,6 @@ export default function Footer() {
       </div>
     </Container>
   );
-}
+};
+
+export default Footer;

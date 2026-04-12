@@ -1,23 +1,21 @@
-
 .Footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
 
-    a {
-        text-decoration: none;
-        color: var(--text);
-        font: 8px 'Raleway', sans-serif;
-    }
+.Credits {
+  font-size: 8px;
 }
 
 .Links {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .Link {
-    color: var(--text);
-    width: 100%;
+  color: var(--text);
+  width: 100%;
 }

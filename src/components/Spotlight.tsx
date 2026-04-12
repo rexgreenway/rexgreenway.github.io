@@ -1,7 +1,7 @@
 import { CardWithImage } from "../containers/Card";
 import Lattice from "../assets/PolyLatLib-Header.png";
 import { ExternalLink } from "./CustomLinks";
-import HorizontalLine from "./HorizontalLine";
+import { HorizontalLine } from "./elements";
 
 import styles from "./Spotlight.module.css";
 
