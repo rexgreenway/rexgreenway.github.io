@@ -16,7 +16,7 @@ import AboutPage from "../pages/software/About";
 
 import Photography from "../pages/portfolio/Photography";
 import CollectionPage from "../pages/portfolio/Collection";
-import Archive from "../pages/portfolio/Archive";
+import ArchiveGuard from "../pages/portfolio/Archive";
 
 // Extended Route Type
 export type CustomRouteObject = RouteObject & {
@@ -58,7 +58,7 @@ const portfolioRoutes: CustomRouteObject = {
       children: [
         {
           index: true,
-          element: <Archive />,
+          element: <ArchiveGuard />,
         },
         {
           path: ":collectionId",
