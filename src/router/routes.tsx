@@ -1,13 +1,16 @@
 import { RouteObject } from "react-router-dom";
 
+// Icons
+import CameraRollIcon from "@mui/icons-material/CameraRoll";
+import TerminalIcon from "@mui/icons-material/Terminal";
+
 import { DARK_THEME, LIGHT_THEME } from "@contexts";
 
 // App Layouts
 import App, { PortfolioApp } from "./App";
 
-// Icons
-import CameraRollIcon from "@mui/icons-material/CameraRoll";
-import TerminalIcon from "@mui/icons-material/Terminal";
+// Auth Guard
+import AuthLayout from "./AuthLayout";
 
 // Pages
 import Home from "../pages/software/Home";
@@ -16,7 +19,7 @@ import AboutPage from "../pages/software/About";
 
 import Photography from "../pages/portfolio/Photography";
 import CollectionPage from "../pages/portfolio/Collection";
-import ArchiveGuard from "../pages/portfolio/Archive";
+import Archive from "../pages/portfolio/Archive";
 
 // Extended Route Type
 export type CustomRouteObject = RouteObject & {
@@ -55,10 +58,11 @@ const portfolioRoutes: CustomRouteObject = {
     },
     {
       path: "archive",
+      element: <AuthLayout />,
       children: [
         {
           index: true,
-          element: <ArchiveGuard />,
+          element: <Archive />,
         },
         {
           path: ":collectionId",

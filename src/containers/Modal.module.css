@@ -1,6 +1,6 @@
 .ModalBackground {
   align-items: center;
-  background-color: rgb(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -17,7 +17,10 @@
   max-width: 80%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
 }
 
 .ImageModal {
@@ -38,4 +41,17 @@
 
 .Failed {
   color: red;
+}
+
+
+.Download {
+  color: black;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.Flex {
+  display: flex;
+  
 }

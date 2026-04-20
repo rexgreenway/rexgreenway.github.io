@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
+
+import { useAuth } from "@contexts";
 
 import { ALBUMS } from "../../api/rex-api/loadAlbums";
 import { getPhoto, getThumbnailURL } from "../../api/rex-api/fetchPhotography";
@@ -13,13 +15,25 @@ import styles from "./Collection.module.css";
 const Collection = () => {
   const { collectionId } = useParams();
 
+  const navigate = useNavigate();
+  const { token, clearToken } = useAuth();
+
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [imageSrc, setImageSrc] = useState<string>("");
 
   const handleOpen = (image_name: string) => {
     // Open modal immediately
     setOpenModal(true);
-    getPhoto(image_name)
+
+    // Check valid token, if not navigate back to archive
+    if (!token.token || token.expires < new Date()) {
+      clearToken();
+      navigate("..");
+      return;
+    }
+
+    // Else get the photo using token
+    getPhoto(token.token, image_name)
       .then((image) => {
         setImageSrc(image.url);
       })
