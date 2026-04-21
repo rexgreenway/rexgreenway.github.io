@@ -3,7 +3,7 @@ import Markdown from "react-markdown";
 
 import { fetchReadMe, getRepoReadMe } from "../api/gh/api";
 
-import { Modal } from "../containers/Modal";
+import { Modal } from "./containers/Modal";
 
 import styles from "./ReadMeModal.module.css";
 

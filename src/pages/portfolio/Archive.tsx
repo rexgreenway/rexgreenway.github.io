@@ -3,7 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { ALBUMS } from "../../api/rex-api/loadAlbums";
 import { getThumbnailURL } from "../../api/rex-api/fetchPhotography";
 
-import { Thumbnail, ThumbnailGrid } from "../../containers/Thumbnail";
+import {
+  Thumbnail,
+  ThumbnailGrid,
+} from "../../components/containers/Thumbnail";
 
 const Archive = () => {
   const navigate = useNavigate();

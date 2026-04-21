@@ -7,8 +7,11 @@ import { ALBUMS } from "../../api/rex-api/loadAlbums";
 import { getPhoto, getThumbnailURL } from "../../api/rex-api/fetchPhotography";
 
 import SectionTitle from "../../components/SectionTitle";
-import { Thumbnail, ThumbnailGrid } from "../../containers/Thumbnail";
-import { ImageModal } from "../../containers/Modal";
+import {
+  Thumbnail,
+  ThumbnailGrid,
+} from "../../components/containers/Thumbnail";
+import { ImageModal } from "../../components/containers/Modal";
 
 import styles from "./Collection.module.css";
 

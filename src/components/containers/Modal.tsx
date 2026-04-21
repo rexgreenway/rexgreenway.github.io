@@ -3,7 +3,7 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { CircularProgress } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 
-import Photo from "../components/Photo";
+import Photo from "../Photo";
 
 import styles from "./Modal.module.css";
 

@@ -3,7 +3,7 @@ import { useState, useEffect, ReactElement } from "react";
 import { fetchProjects, listUserReposResponseData } from "../../api/gh/api";
 
 import Project from "../../components/Project";
-import { Grid } from "../../containers/CardContainers";
+import { Grid } from "../../components/containers/CardContainers";
 
 export default function Projects() {
   const [projects, setProjects] = useState<ReactElement[]>();
@@ -22,7 +22,7 @@ export default function Projects() {
             topics={repo.topics}
             has_pages={repo.has_pages}
           />
-        ))
+        )),
       );
     });
   }, []);

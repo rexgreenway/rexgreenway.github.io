@@ -1,6 +1,7 @@
 .ModalBackground {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -43,7 +44,6 @@
   color: red;
 }
 
-
 .Download {
   color: black;
   background-color: white;
@@ -53,5 +53,4 @@
 
 .Flex {
   display: flex;
-  
 }

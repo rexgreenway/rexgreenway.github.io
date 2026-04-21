@@ -1,4 +1,4 @@
-import { CardWithImage } from "../containers/Card";
+import { CardWithImage } from "./containers/Card";
 import Lattice from "../assets/PolyLatLib-Header.png";
 import { ExternalLink } from "./CustomLinks";
 import { HorizontalLine } from "./elements";
