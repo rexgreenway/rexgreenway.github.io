@@ -11,7 +11,7 @@ import {
   Thumbnail,
   ThumbnailGrid,
 } from "../../components/containers/Thumbnail";
-import { ImageModal } from "../../components/containers/Modal";
+import { ImageModal } from "../../components/modals/Modal";
 
 import styles from "./Collection.module.css";
 

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "@contexts";
 
 import { getToken } from "../api/rex-api/fetchPhotography";
-import { Modal } from "./containers/Modal";
+import { Modal } from "./modals/Modal";
 
 import styles from "./Auth.module.css";
 

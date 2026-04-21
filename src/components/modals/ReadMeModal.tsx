@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 
-import { fetchReadMe, getRepoReadMe } from "../api/gh/api";
+import { fetchReadMe, getRepoReadMe } from "../../api/gh/api";
 
-import { Modal } from "./containers/Modal";
+import { Modal } from "./Modal";
 
 import styles from "./ReadMeModal.module.css";
 
