@@ -1,44 +1,100 @@
 import { useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
+
+import { useAuth } from "@contexts";
 
 import { ALBUMS } from "../../api/rex-api/loadAlbums";
-import { getPhoto, getThumbnailURL } from "../../api/rex-api/fetchPhotography";
+import {
+  getPhoto,
+  getThumbnailURL,
+  downloadPhoto,
+} from "../../api/rex-api/fetchPhotography";
 
 import SectionTitle from "../../components/SectionTitle";
-import { Thumbnail, ThumbnailGrid } from "../../containers/Thumbnail";
-import { ImageModal } from "../../containers/Modal";
+import {
+  Thumbnail,
+  ThumbnailGrid,
+} from "../../components/containers/Thumbnail";
+import ImageModal from "../../components/modals/ImageModal";
 
 import styles from "./Collection.module.css";
 
 const Collection = () => {
   const { collectionId } = useParams();
 
+  const navigate = useNavigate();
+  const { token, clearToken } = useAuth();
+
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [imageSrc, setImageSrc] = useState<string>("");
 
-  const handleOpen = (image_name: string) => {
+  const [currentImage, setCurrentImage] = useState<{
+    name: string;
+    index: number;
+  } | null>(null);
+
+  // Handle if incorrect collection id
+  if (!(collectionId! in ALBUMS) || collectionId === undefined) {
+    return <h2>NO SUCH COLLECTION...</h2>;
+  }
+
+  // Fetch and Transform images
+  const album = ALBUMS[collectionId];
+  const albumImages = Object.keys(album.photos);
+
+  const handleOpen = (name: string, index: number) => {
     // Open modal immediately
+    setCurrentImage({ name, index });
     setOpenModal(true);
-    getPhoto(image_name)
+
+    // Check valid token, if not navigate back to archive
+    if (!token.token || token.expires < new Date()) {
+      clearToken();
+      navigate("..");
+      return;
+    }
+
+    // Else get the photo using token
+    getPhoto(token.token, name)
       .then((image) => {
         setImageSrc(image.url);
       })
       .catch((error) => {
         console.error("Error fetching image:", error);
         setImageSrc("FAILED");
+        setCurrentImage(null);
       });
   };
 
   const handleClose = () => {
     setOpenModal(false);
     setImageSrc("");
+    setCurrentImage(null);
   };
 
-  if (!(collectionId! in ALBUMS) || collectionId === undefined) {
-    return <h2>NO SUCH COLLECTION...</h2>;
-  }
+  const handlePrev = (currentIndex: number) => {
+    const prevIndex = currentIndex - 1;
+    const prevImage = albumImages[prevIndex];
+    if (!prevImage) return;
+    handleOpen(prevImage, prevIndex);
+  };
 
-  const album = ALBUMS[collectionId];
+  const handleNext = (currentIndex: number) => {
+    const nextIndex = currentIndex + 1;
+    const nextImage = albumImages[nextIndex];
+    if (!nextImage) return;
+    handleOpen(nextImage, nextIndex);
+  };
+
+  const downloadImage = (image_name: string) => {
+    if (!token.token || token.expires < new Date()) {
+      clearToken();
+      navigate("..");
+      return;
+    }
+
+    downloadPhoto(token.token, image_name);
+  };
 
   return (
     <>
@@ -58,16 +114,34 @@ const Collection = () => {
         </div>
       </div>
       <ThumbnailGrid>
-        {Object.entries(album.photos).map(([name]) => (
-          <Thumbnail
-            key={name}
-            onClick={() => handleOpen(name)}
-            imageSrc={getThumbnailURL(name)}
-          />
-        ))}
+        {albumImages.map((name, index) => {
+          return (
+            <Thumbnail
+              key={name}
+              onClick={() => handleOpen(name, index)}
+              imageSrc={getThumbnailURL(name)}
+            />
+          );
+        })}
       </ThumbnailGrid>
 
-      <ImageModal isOpen={openModal} close={handleClose} src={imageSrc} />
+      {openModal && currentImage && (
+        <ImageModal
+          close={handleClose}
+          src={imageSrc}
+          download={() => downloadImage(currentImage.name)}
+          prev={
+            currentImage.index > 0
+              ? () => handlePrev(currentImage.index)
+              : undefined
+          }
+          next={
+            currentImage.index < albumImages.length - 1
+              ? () => handleNext(currentImage.index)
+              : undefined
+          }
+        />
+      )}
     </>
   );
 };

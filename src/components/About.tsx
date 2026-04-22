@@ -1,6 +1,6 @@
 import PlaceIcon from "@mui/icons-material/Place";
 
-import Container from "../containers/Container";
+import Container from "./containers/Container";
 import { PDFLink } from "./CustomLinks";
 import { Tags } from "./Tags";
 

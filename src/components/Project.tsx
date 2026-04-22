@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import Card from "../containers/Card";
+import Card from "./containers/Card";
 import { HorizontalLine } from "./elements";
-import ReadMeModal from "./ReadMeModal";
+import ReadMeModal from "./modals/ReadMeModal";
 import { ExternalLink, PagesLink } from "./CustomLinks";
 import { Tags } from "./Tags";
 

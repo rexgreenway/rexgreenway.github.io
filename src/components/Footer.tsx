@@ -1,6 +1,6 @@
 import { GitHub, Instagram, LinkedIn, ViewStream } from "@mui/icons-material";
 
-import Container from "../containers/Container";
+import Container from "./containers/Container";
 import { ToggleThemeButton } from "./elements";
 
 import styles from "./Footer.module.css";

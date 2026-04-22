@@ -5,7 +5,7 @@ import RexLogo from "../assets/R-Logo.svg?react";
 
 import { CustomRouteObject } from "../router/routes";
 
-import Container from "../containers/Container";
+import Container from "./containers/Container";
 
 import styles from "./Header.module.css";
 
