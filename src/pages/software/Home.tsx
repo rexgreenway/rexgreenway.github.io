@@ -2,12 +2,13 @@ import { useState, useEffect, ReactElement } from "react";
 
 import { ghApi } from "@api";
 
+import { CentredFlex } from "@components/containers";
+
 import Project from "../../components/Project";
 import About from "../../components/About";
 import { HorizontalLine } from "../../components/elements";
 import Spotlight from "../../components/Spotlight";
 import SectionTitle from "../../components/SectionTitle";
-import { CentredFlex } from "../../components/containers/CardContainers";
 
 export default function Home() {
   const [projects, setProjects] = useState<ReactElement[]>();

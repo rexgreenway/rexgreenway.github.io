@@ -2,12 +2,9 @@ import { useNavigate } from "react-router-dom";
 
 import { rexApi } from "@api";
 
-import ALBUMS from "../../assets/albums";
+import { ThumbnailGrid, Thumbnail } from "@components/containers";
 
-import {
-  Thumbnail,
-  ThumbnailGrid,
-} from "../../components/containers/Thumbnail";
+import ALBUMS from "../../assets/albums";
 
 const Archive = () => {
   const navigate = useNavigate();

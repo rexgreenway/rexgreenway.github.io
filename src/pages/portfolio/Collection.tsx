@@ -3,12 +3,9 @@ import { NavLink, useNavigate, useParams } from "react-router-dom";
 
 import { rexApi } from "@api";
 import { useAuth } from "@contexts";
+import { Thumbnail, ThumbnailGrid } from "@components/containers";
 
 import SectionTitle from "../../components/SectionTitle";
-import {
-  Thumbnail,
-  ThumbnailGrid,
-} from "../../components/containers/Thumbnail";
 import ImageModal from "../../components/modals/ImageModal";
 
 import ALBUMS from "../../assets/albums";

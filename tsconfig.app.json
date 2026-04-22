@@ -3,6 +3,8 @@
     "paths": {
       "@api": ["./src/api"],
       "@contexts": ["./src/contexts"],
+      "@components": ["./src/components"],
+      "@components/*": ["./src/components/*"],
     },
 
     "target": "ES2020",

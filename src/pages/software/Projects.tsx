@@ -2,8 +2,9 @@ import { useState, useEffect, ReactElement } from "react";
 
 import { ghApi } from "@api";
 
+import { Grid } from "@components/containers";
+
 import Project from "../../components/Project";
-import { Grid } from "../../components/containers/CardContainers";
 
 export default function Projects() {
   const [projects, setProjects] = useState<ReactElement[]>();
