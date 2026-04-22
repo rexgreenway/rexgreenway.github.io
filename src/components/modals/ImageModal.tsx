@@ -28,11 +28,13 @@ const ImageModal = ({ close, download, src }: ImageModalProps) => {
         <>
           <img src={src} className={styles.Background} />
           {/* Div with  */}
-          <div className={`${styles.Footer} ${styles.Background}`}>
-            {/* <NavigateBeforeIcon /> */}
-            {download && src && <DownloadIcon onClick={() => download()} />}
-            {/* <NavigateNextIcon /> */}
-          </div>
+          {src && (
+            <div className={`${styles.Footer} ${styles.Background}`}>
+              {/* <NavigateBeforeIcon /> */}
+              {download && <DownloadIcon onClick={() => download()} />}
+              {/* <NavigateNextIcon /> */}
+            </div>
+          )}
         </>
       )}
     </Modal>
