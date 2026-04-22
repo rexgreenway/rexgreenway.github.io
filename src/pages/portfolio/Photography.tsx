@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom";
 
+import { Photo } from "@components";
+
 import headerImg from "../../assets/portfolio-header.jpg";
 
 import styles from "./Photography.module.css";
-import Photo from "../../components/Photo";
 
 const Photography = () => {
   return (

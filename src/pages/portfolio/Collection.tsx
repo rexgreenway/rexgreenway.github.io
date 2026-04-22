@@ -1,21 +1,15 @@
 import { useState } from "react";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 
+import { rexApi } from "@api";
 import { useAuth } from "@contexts";
 
-import { ALBUMS } from "../../api/rex-api/loadAlbums";
-import {
-  getPhoto,
-  getThumbnailURL,
-  downloadPhoto,
-} from "../../api/rex-api/fetchPhotography";
+import { Thumbnail, ThumbnailGrid } from "@components/containers";
+import { ImageModal } from "@components/modals";
 
-import SectionTitle from "../../components/SectionTitle";
-import {
-  Thumbnail,
-  ThumbnailGrid,
-} from "../../components/containers/Thumbnail";
-import ImageModal from "../../components/modals/ImageModal";
+import { SectionTitle } from "@components";
+
+import ALBUMS from "../../assets/albums";
 
 import styles from "./Collection.module.css";
 
@@ -34,7 +28,7 @@ const Collection = () => {
   } | null>(null);
 
   // Handle if incorrect collection id
-  if (!(collectionId! in ALBUMS) || collectionId === undefined) {
+  if (!collectionId || !(collectionId in ALBUMS)) {
     return <h2>NO SUCH COLLECTION...</h2>;
   }
 
@@ -55,7 +49,8 @@ const Collection = () => {
     }
 
     // Else get the photo using token
-    getPhoto(token.token, name)
+    rexApi
+      .getPhoto(token.token, name)
       .then((image) => {
         setImageSrc(image.url);
       })
@@ -93,7 +88,7 @@ const Collection = () => {
       return;
     }
 
-    downloadPhoto(token.token, image_name);
+    rexApi.downloadPhoto(token.token, image_name);
   };
 
   return (
@@ -119,7 +114,7 @@ const Collection = () => {
             <Thumbnail
               key={name}
               onClick={() => handleOpen(name, index)}
-              imageSrc={getThumbnailURL(name)}
+              imageSrc={rexApi.getThumbnailURL(name)}
             />
           );
         })}

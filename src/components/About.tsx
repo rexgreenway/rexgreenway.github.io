@@ -1,10 +1,11 @@
 import PlaceIcon from "@mui/icons-material/Place";
 
-import Container from "./containers/Container";
+import { Container } from "@components/containers";
+
 import { PDFLink } from "./CustomLinks";
 import { Tags } from "./Tags";
 
-import PDF from "../documents/2024-06-01-CV.pdf";
+import PDF from "../assets/documents/2024-06-01-CV.pdf";
 
 import styles from "./About.module.css";
 
