@@ -1,36 +1,41 @@
-.ModalBackground {
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  left: 0;
+.PageBackground {
+  /* Fixed position across the whole page */
   position: fixed;
+  left: 0;
   top: 0;
+  height: 100vh;
   width: 100vw;
   z-index: 2;
+
+  /* Position Modal in center of the screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Background blur */
+  backdrop-filter: blur(5px);
 }
 
 .Modal {
-  max-height: 80%;
-  max-width: 80%;
+  /* Modal content cannot be bigger than 80% of the screen */
+  max-height: 80vh;
+  max-width: 80vw;
+
+  /* Positions elements inside the Modal */
+  /* ! Required for proper scaling ! */
   display: flex;
-  justify-content: center;
-  /* align-items: center; */
   flex-direction: column;
-  gap: 5px;
-  align-items: flex-end;
+  align-items: center;
+  gap: 10px;
 }
 
-.ImageModal {
-  background-color: white;
-  border: 10px solid white;
-  border-radius: 5px;
+/* Scales Images properly to share space with other modal elements */
+.Modal img {
+  min-height: 0;
+  flex: 0 1 auto;
+  width: auto;
   max-width: 100%;
-  max-height: 100%;
-  pointer-events: none;
 }
 
 .CloseButton {
@@ -38,19 +43,4 @@
   top: 10px;
   right: 10px;
   cursor: pointer;
-}
-
-.Failed {
-  color: red;
-}
-
-.Download {
-  color: black;
-  background-color: white;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.Flex {
-  display: flex;
 }

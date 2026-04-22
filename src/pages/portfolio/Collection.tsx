@@ -4,14 +4,18 @@ import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "@contexts";
 
 import { ALBUMS } from "../../api/rex-api/loadAlbums";
-import { getPhoto, getThumbnailURL } from "../../api/rex-api/fetchPhotography";
+import {
+  getPhoto,
+  getThumbnailURL,
+  downloadPhoto,
+} from "../../api/rex-api/fetchPhotography";
 
 import SectionTitle from "../../components/SectionTitle";
 import {
   Thumbnail,
   ThumbnailGrid,
 } from "../../components/containers/Thumbnail";
-import { ImageModal } from "../../components/modals/Modal";
+import ImageModal from "../../components/modals/ImageModal";
 
 import styles from "./Collection.module.css";
 
@@ -23,9 +27,11 @@ const Collection = () => {
 
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [imageSrc, setImageSrc] = useState<string>("");
+  const [currentImage, setCurrentImage] = useState<string | null>(null);
 
   const handleOpen = (image_name: string) => {
     // Open modal immediately
+    setCurrentImage(image_name);
     setOpenModal(true);
 
     // Check valid token, if not navigate back to archive
@@ -43,12 +49,25 @@ const Collection = () => {
       .catch((error) => {
         console.error("Error fetching image:", error);
         setImageSrc("FAILED");
+        setCurrentImage(null);
       });
   };
 
   const handleClose = () => {
     setOpenModal(false);
     setImageSrc("");
+    setCurrentImage(null);
+  };
+
+  const downloadImage = (image_name: string) => {
+    // Check valid token, if not navigate back to archive
+    if (!token.token || token.expires < new Date()) {
+      clearToken();
+      navigate("..");
+      return;
+    }
+
+    downloadPhoto(token.token, image_name);
   };
 
   if (!(collectionId! in ALBUMS) || collectionId === undefined) {
@@ -84,7 +103,13 @@ const Collection = () => {
         ))}
       </ThumbnailGrid>
 
-      <ImageModal isOpen={openModal} close={handleClose} src={imageSrc} />
+      {openModal && currentImage && (
+        <ImageModal
+          close={handleClose}
+          src={imageSrc}
+          download={() => downloadImage(currentImage)}
+        />
+      )}
     </>
   );
 };

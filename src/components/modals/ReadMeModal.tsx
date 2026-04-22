@@ -3,11 +3,11 @@ import Markdown from "react-markdown";
 
 import { fetchReadMe, getRepoReadMe } from "../../api/gh/api";
 
-import { Modal } from "./Modal";
+import Modal from "./Modal";
 
 import styles from "./ReadMeModal.module.css";
 
-export default function ReadMeModal({
+const ReadMeModal = ({
   repo,
   isOpen,
   close,
@@ -15,7 +15,7 @@ export default function ReadMeModal({
   repo: string;
   isOpen: boolean;
   close: () => void;
-}) {
+}) => {
   const [readmeContent, setReadmeContent] = useState<string>("Loading...");
 
   // Fetch README
@@ -52,4 +52,6 @@ export default function ReadMeModal({
       </Modal>
     )
   );
-}
+};
+
+export default ReadMeModal;

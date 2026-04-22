@@ -30,5 +30,6 @@ export interface Image {
 
 export enum Size {
   THUMBNAIL = "thumbnail",
+  MEDIUM = "medium",
   LARGE = "large",
 }

@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "@contexts";
 
 import { getToken } from "../api/rex-api/fetchPhotography";
-import { Modal } from "./modals/Modal";
 
 import styles from "./Auth.module.css";
 
@@ -52,17 +51,5 @@ export const PasswordForm = ({
         <p>{"<-"} Back to Home</p>
       </div>
     </div>
-  );
-};
-
-export const PasswordModal = ({
-  onAuthenticated,
-}: {
-  onAuthenticated: () => void;
-}) => {
-  return (
-    <Modal close={() => {}} allowEscape={false} allowClickOut={false}>
-      <PasswordForm onAuthenticated={onAuthenticated} />
-    </Modal>
   );
 };

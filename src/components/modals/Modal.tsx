@@ -1,27 +1,23 @@
 import { ReactNode, useEffect } from "react";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import { CircularProgress } from "@mui/material";
-import DownloadIcon from "@mui/icons-material/Download";
-
-import Photo from "../Photo";
 
 import styles from "./Modal.module.css";
 
 interface ModalProps {
   close: () => void;
-  allowEscape?: boolean;
-  allowClickOut?: boolean;
-  children?: ReactNode;
+  allowClose?: boolean;
+  children?: ReactNode | ReactNode[];
+  className?: string;
 }
 
 const Modal = ({
   close,
-  allowEscape = true,
-  allowClickOut = true,
+  allowClose = true,
   children,
+  className,
 }: ModalProps) => {
-  // Close on Escape Key Press
-  if (allowEscape) {
+  // Add ability to close with Escape Key
+  if (allowClose) {
     useEffect(() => {
       const handleEscKey = (event: KeyboardEvent) => {
         if (event.key === "Escape") {
@@ -36,51 +32,17 @@ const Modal = ({
   }
 
   return (
-    <div
-      onClick={() => (allowClickOut ? close() : null)}
-      className={styles.ModalBackground}
-    >
-      {allowClickOut && (
+    <div id="modal" className={styles.PageBackground}>
+      {allowClose && (
         <CloseRoundedIcon
           fontSize="large"
           className={styles.CloseButton}
           onClick={close}
         />
       )}
-      <div className={styles.Modal}>{children}</div>
+      <div className={`${styles.Modal} ${className}`}>{children}</div>
     </div>
   );
 };
 
-const ImageModal = ({
-  src,
-  isOpen,
-  close,
-}: {
-  src?: string;
-  isOpen: boolean;
-  close: () => void;
-}) => {
-  return (
-    isOpen && (
-      <Modal close={close}>
-        {!src ? (
-          <div className={styles.ImageModal}>
-            <CircularProgress color="inherit" />
-          </div>
-        ) : src === "FAILED" ? (
-          <div className={`${styles.ImageModal} ${styles.Failed}`}>
-            Failed to load image.
-          </div>
-        ) : (
-          <>
-            <Photo src={src} className={styles.ImageModal} />
-            <DownloadIcon className={styles.Download} />
-          </>
-        )}
-      </Modal>
-    )
-  );
-};
-
-export { Modal, ImageModal };
+export default Modal;

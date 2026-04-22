@@ -1,0 +1,28 @@
+.Background {
+  background-color: var(--background);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 30px var(--text);
+}
+
+.Failed {
+  color: red;
+}
+
+.Download {
+  color: black;
+  background-color: white;
+  /* padding: 5px; */
+  border-radius: 5px;
+}
+
+.Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+
+  color: var(--text);
+}

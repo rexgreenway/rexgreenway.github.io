@@ -52,7 +52,7 @@ export async function getToken(authForm: FormData): Promise<TokenResponse> {
 export async function getPhoto(
   token: string,
   image_name: string,
-  size: Size = Size.LARGE,
+  size: Size = Size.MEDIUM,
 ): Promise<Image> {
   const encoded_path = encodeURI(`${image_name}?size=${size}`);
   const url = `${API_URL}/photography/${encoded_path}`;
@@ -70,4 +70,43 @@ export async function getPhoto(
   }
 
   return await response.json();
+}
+
+/**
+ * Downloads a photo.
+ *
+ * @param {string} image_name
+ * @param {Size} [size=Size.MEDIUM] Optional
+ *
+ * @returns {Image} The desired photo.
+ */
+export async function downloadPhoto(
+  token: string,
+  image_name: string,
+  size: Size = Size.MEDIUM,
+): Promise<void> {
+  const encoded_path = encodeURI(`${image_name}/download?size=${size}`);
+  const url = `${API_URL}/photography/${encoded_path}`;
+
+  const response = await fetch(url, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+  if (response.status == 401) {
+    throw new Error(`Fetching Photo failed | unauthenticated`);
+  } else if (!response.ok) {
+    throw new Error(
+      `failed to download photo '${image_name}' | status: ${response.status}`,
+    );
+  }
+
+  const blob = await response.blob();
+  const blobUrl = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = blobUrl;
+  link.download = image_name;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(blobUrl);
 }
