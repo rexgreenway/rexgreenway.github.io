@@ -5,7 +5,7 @@ import { useAuth } from "@contexts";
 
 import { rexApi } from "@api";
 
-import styles from "./Auth.module.css";
+import styles from "./PasswordForm.module.css";
 
 export const PasswordForm = ({
   onAuthenticated,

@@ -1,5 +1,6 @@
-import { PasswordForm } from "../Auth";
 import { Modal } from ".";
+
+import { PasswordForm } from "../PasswordForm";
 
 const PasswordModal = ({
   onAuthenticated,
