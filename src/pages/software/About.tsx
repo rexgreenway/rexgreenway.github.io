@@ -2,7 +2,7 @@ import { PDFLink } from "../../components/CustomLinks";
 import { HorizontalLine } from "../../components/elements";
 import Container from "../../components/containers/Container";
 
-import PDF from "../../documents/2024-06-01-CV.pdf";
+import PDF from "../../assets/documents/2024-06-01-CV.pdf";
 
 import styles from "./About.module.css";
 
