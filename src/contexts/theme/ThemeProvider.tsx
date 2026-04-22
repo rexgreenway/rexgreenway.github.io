@@ -5,6 +5,8 @@ import type { Theme } from "./types";
 import { ThemeContext } from "./ThemeContext";
 
 const ThemeProvider = ({ children }: { children: ReactNode }) => {
+  const [theme, setTheme] = useState<Theme>("light");
+
   const deviceDarkTheme = useMemo(
     () => window.matchMedia("(prefers-color-scheme: dark)").matches,
     [],
@@ -14,9 +16,8 @@ const ThemeProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const r = document.querySelector(":root");
     r!.setAttribute("data-theme", deviceDarkTheme ? "dark" : "light");
+    setTheme(deviceDarkTheme ? "dark" : "light");
   }, [deviceDarkTheme]);
-
-  const [theme, setTheme] = useState<Theme>(deviceDarkTheme ? "dark" : "light");
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
