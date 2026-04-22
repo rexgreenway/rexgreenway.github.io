@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { capitalize } from "@mui/material";
 
 import RexLogo from "../assets/R-Logo.svg?react";
@@ -16,6 +16,8 @@ interface HeaderProps {
 }
 
 const Header = ({ homeTitle, navLinks, adjacentLinks }: HeaderProps) => {
+  const { collectionId } = useParams();
+
   return (
     <Container id="header" className={styles.Header}>
       {/* LOGO : Separate to Title as to sit next to navLinks */}
@@ -48,6 +50,8 @@ const Header = ({ homeTitle, navLinks, adjacentLinks }: HeaderProps) => {
       {/* NAVIGATION: Based on passed contextual route hierarchy */}
       <nav className={styles.NavBar}>
         {navLinks?.children?.map((k) => {
+          const navTitle = k.path || homeTitle;
+
           // Only include nav links to non dynamic segments
           if (!k.path?.includes(":")) {
             return (
@@ -59,7 +63,13 @@ const Header = ({ homeTitle, navLinks, adjacentLinks }: HeaderProps) => {
                 to={k.path || ""}
                 end
               >
-                {k.path || homeTitle}
+                {k.path && collectionId ? (
+                  <>
+                    {navTitle} &gt; <u>{collectionId}</u>
+                  </>
+                ) : (
+                  navTitle
+                )}
               </NavLink>
             );
           }
