@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import { ALBUMS } from "../../api/rex-api/loadAlbums";
-import { getThumbnailURL } from "../../api/rex-api/fetchPhotography";
+import { rexApi } from "../../api";
 
 import {
   Thumbnail,
@@ -16,7 +16,7 @@ const Archive = () => {
       {Object.entries(ALBUMS).map(([key, album]) => (
         <Thumbnail
           key={key}
-          imageSrc={getThumbnailURL(album.thumbnail)}
+          imageSrc={rexApi.getThumbnailURL(album.thumbnail)}
           title={album.name}
           onClick={() => navigate(key)}
         />

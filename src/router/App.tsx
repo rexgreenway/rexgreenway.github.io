@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { Outlet, useLocation, useNavigation } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 
-import { wakeUp } from "../api/rex-api/fetchPhotography";
-
 import { useTheme, Theme } from "@contexts";
+
+import { rexApi } from "../api";
 
 import Header, { SimpleHeader } from "../components/Header";
 import Footer from "../components/Footer";
@@ -86,7 +86,7 @@ export const PortfolioApp = ({
 
   // Call on every route change under /portfolio
   useEffect(() => {
-    wakeUp();
+    rexApi.wakeUp();
   }, [location.pathname]);
 
   return <App homeTitle={homeTitle} theme={theme} simple={simple} />;

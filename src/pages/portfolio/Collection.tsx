@@ -4,11 +4,7 @@ import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "@contexts";
 
 import { ALBUMS } from "../../api/rex-api/loadAlbums";
-import {
-  getPhoto,
-  getThumbnailURL,
-  downloadPhoto,
-} from "../../api/rex-api/fetchPhotography";
+import { rexApi } from "../../api";
 
 import SectionTitle from "../../components/SectionTitle";
 import {
@@ -55,7 +51,8 @@ const Collection = () => {
     }
 
     // Else get the photo using token
-    getPhoto(token.token, name)
+    rexApi
+      .getPhoto(token.token, name)
       .then((image) => {
         setImageSrc(image.url);
       })
@@ -93,7 +90,7 @@ const Collection = () => {
       return;
     }
 
-    downloadPhoto(token.token, image_name);
+    rexApi.downloadPhoto(token.token, image_name);
   };
 
   return (
@@ -119,7 +116,7 @@ const Collection = () => {
             <Thumbnail
               key={name}
               onClick={() => handleOpen(name, index)}
-              imageSrc={getThumbnailURL(name)}
+              imageSrc={rexApi.getThumbnailURL(name)}
             />
           );
         })}

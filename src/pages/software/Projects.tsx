@@ -1,6 +1,6 @@
 import { useState, useEffect, ReactElement } from "react";
 
-import { fetchProjects, listUserReposResponseData } from "../../api/gh/api";
+import { ghApi } from "../../api";
 
 import Project from "../../components/Project";
 import { Grid } from "../../components/containers/CardContainers";
@@ -10,9 +10,9 @@ export default function Projects() {
 
   // Fetch First N Projects
   useEffect(() => {
-    fetchProjects().then((result) => {
+    ghApi.fetchProjects().then((result) => {
       setProjects(
-        result.map((repo: listUserReposResponseData) => (
+        result.map((repo) => (
           <Project
             key={repo.id}
             name={repo.name}

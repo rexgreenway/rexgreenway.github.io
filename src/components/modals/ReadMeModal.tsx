@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 
-import { fetchReadMe, getRepoReadMe } from "../../api/gh/api";
+import { ghApi } from "../../api";
 
 import Modal from "./Modal";
 
@@ -20,7 +20,7 @@ const ReadMeModal = ({
 
   // Fetch README
   useEffect(() => {
-    fetchReadMe(repo).then((result: getRepoReadMe) => {
+    ghApi.fetchReadMe(repo).then((result) => {
       if (!Array.isArray(result) && result.type === "file") {
         const decoded = atob(result.content);
         if (decoded === "") {

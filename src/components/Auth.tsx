@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useAuth } from "@contexts";
 
-import { getToken } from "../api/rex-api/fetchPhotography";
+import { rexApi } from "../api";
 
 import styles from "./Auth.module.css";
 
@@ -20,7 +20,8 @@ export const PasswordForm = ({
 
   const enterPassword = (authForm: FormData) => {
     authForm.set("username", "rexgreenway");
-    getToken(authForm)
+    rexApi
+      .getToken(authForm)
       .then((resp) => {
         storeToken(resp.access_token);
         onAuthenticated();

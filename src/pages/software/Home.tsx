@@ -1,6 +1,6 @@
 import { useState, useEffect, ReactElement } from "react";
 
-import { fetchProjects, listUserReposResponseData } from "../../api/gh/api";
+import { ghApi } from "../../api";
 
 import Project from "../../components/Project";
 import About from "../../components/About";
@@ -14,9 +14,9 @@ export default function Home() {
 
   // Fetch First N Projects
   useEffect(() => {
-    fetchProjects(3).then((result) => {
+    ghApi.fetchProjects(3).then((result) => {
       setProjects(
-        result.map((repo: listUserReposResponseData) => (
+        result.map((repo) => (
           <Project
             key={repo.id}
             name={repo.name}
