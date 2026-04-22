@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 import { rexApi } from "@api";
 
-import { ALBUMS } from "../../api/rex-api/loadAlbums";
+import ALBUMS from "../../assets/albums";
 
 import {
   Thumbnail,

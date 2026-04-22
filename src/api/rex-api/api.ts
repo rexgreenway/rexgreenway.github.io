@@ -1,5 +1,16 @@
-import { API_URL, Image, Size, THUMBNAIL_BUCKET, TokenResponse } from "./model";
+import { type Image, Size, type TokenResponse } from "./model";
 
+// CONSTANTS
+// export const API_URL = "http://127.0.0.1:8080";
+export const API_URL = "https://rex-api-505972842640.europe-west2.run.app";
+
+export const THUMBNAIL_BUCKET = "rex-thumbnails";
+
+/**
+ * Rex API client for authentication, photography, and utility operations.
+ * Provides methods to interact with the Rex API including token management,
+ * photo fetching, and downloading.
+ */
 const rexApi = {
   // UTILITY FUNCS
   getThumbnailURL: (image_name: string): string => {

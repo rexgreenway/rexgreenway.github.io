@@ -4,14 +4,14 @@ import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { rexApi } from "@api";
 import { useAuth } from "@contexts";
 
-import { ALBUMS } from "../../api/rex-api/loadAlbums";
-
 import SectionTitle from "../../components/SectionTitle";
 import {
   Thumbnail,
   ThumbnailGrid,
 } from "../../components/containers/Thumbnail";
 import ImageModal from "../../components/modals/ImageModal";
+
+import ALBUMS from "../../assets/albums";
 
 import styles from "./Collection.module.css";
 
@@ -30,7 +30,7 @@ const Collection = () => {
   } | null>(null);
 
   // Handle if incorrect collection id
-  if (!(collectionId! in ALBUMS) || collectionId === undefined) {
+  if (!collectionId || !(collectionId in ALBUMS)) {
     return <h2>NO SUCH COLLECTION...</h2>;
   }
 
