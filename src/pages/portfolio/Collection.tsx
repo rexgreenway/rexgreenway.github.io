@@ -27,11 +27,24 @@ const Collection = () => {
 
   const [openModal, setOpenModal] = useState<boolean>(false);
   const [imageSrc, setImageSrc] = useState<string>("");
-  const [currentImage, setCurrentImage] = useState<string | null>(null);
 
-  const handleOpen = (image_name: string) => {
+  const [currentImage, setCurrentImage] = useState<{
+    name: string;
+    index: number;
+  } | null>(null);
+
+  // Handle if incorrect collection id
+  if (!(collectionId! in ALBUMS) || collectionId === undefined) {
+    return <h2>NO SUCH COLLECTION...</h2>;
+  }
+
+  // Fetch and Transform images
+  const album = ALBUMS[collectionId];
+  const albumImages = Object.keys(album.photos);
+
+  const handleOpen = (name: string, index: number) => {
     // Open modal immediately
-    setCurrentImage(image_name);
+    setCurrentImage({ name, index });
     setOpenModal(true);
 
     // Check valid token, if not navigate back to archive
@@ -42,7 +55,7 @@ const Collection = () => {
     }
 
     // Else get the photo using token
-    getPhoto(token.token, image_name)
+    getPhoto(token.token, name)
       .then((image) => {
         setImageSrc(image.url);
       })
@@ -59,8 +72,21 @@ const Collection = () => {
     setCurrentImage(null);
   };
 
+  const handlePrev = (currentIndex: number) => {
+    const prevIndex = currentIndex - 1;
+    const prevImage = albumImages[prevIndex];
+    if (!prevImage) return;
+    handleOpen(prevImage, prevIndex);
+  };
+
+  const handleNext = (currentIndex: number) => {
+    const nextIndex = currentIndex + 1;
+    const nextImage = albumImages[nextIndex];
+    if (!nextImage) return;
+    handleOpen(nextImage, nextIndex);
+  };
+
   const downloadImage = (image_name: string) => {
-    // Check valid token, if not navigate back to archive
     if (!token.token || token.expires < new Date()) {
       clearToken();
       navigate("..");
@@ -69,12 +95,6 @@ const Collection = () => {
 
     downloadPhoto(token.token, image_name);
   };
-
-  if (!(collectionId! in ALBUMS) || collectionId === undefined) {
-    return <h2>NO SUCH COLLECTION...</h2>;
-  }
-
-  const album = ALBUMS[collectionId];
 
   return (
     <>
@@ -94,20 +114,32 @@ const Collection = () => {
         </div>
       </div>
       <ThumbnailGrid>
-        {Object.entries(album.photos).map(([name]) => (
-          <Thumbnail
-            key={name}
-            onClick={() => handleOpen(name)}
-            imageSrc={getThumbnailURL(name)}
-          />
-        ))}
+        {albumImages.map((name, index) => {
+          return (
+            <Thumbnail
+              key={name}
+              onClick={() => handleOpen(name, index)}
+              imageSrc={getThumbnailURL(name)}
+            />
+          );
+        })}
       </ThumbnailGrid>
 
       {openModal && currentImage && (
         <ImageModal
           close={handleClose}
           src={imageSrc}
-          download={() => downloadImage(currentImage)}
+          download={() => downloadImage(currentImage.name)}
+          prev={
+            currentImage.index > 0
+              ? () => handlePrev(currentImage.index)
+              : undefined
+          }
+          next={
+            currentImage.index < albumImages.length - 1
+              ? () => handleNext(currentImage.index)
+              : undefined
+          }
         />
       )}
     </>

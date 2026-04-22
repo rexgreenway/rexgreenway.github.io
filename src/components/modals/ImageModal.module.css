@@ -9,11 +9,8 @@
   color: red;
 }
 
-.Download {
-  color: black;
-  background-color: white;
-  /* padding: 5px; */
-  border-radius: 5px;
+.Icon {
+  cursor: pointer;
 }
 
 .Footer {

@@ -1,7 +1,5 @@
 import { CircularProgress } from "@mui/material";
-import DownloadIcon from "@mui/icons-material/Download";
-import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import { Download, NavigateBefore, NavigateNext } from "@mui/icons-material";
 
 import Modal from "./Modal";
 
@@ -11,9 +9,11 @@ interface ImageModalProps {
   close: () => void;
   src?: string;
   download?: () => void;
+  prev?: () => void;
+  next?: () => void;
 }
 
-const ImageModal = ({ close, download, src }: ImageModalProps) => {
+const ImageModal = ({ close, src, download, prev, next }: ImageModalProps) => {
   return (
     <Modal close={close}>
       {!src ? (
@@ -30,9 +30,20 @@ const ImageModal = ({ close, download, src }: ImageModalProps) => {
           {/* Div with  */}
           {src && (
             <div className={`${styles.Footer} ${styles.Background}`}>
-              {/* <NavigateBeforeIcon /> */}
-              {download && <DownloadIcon onClick={() => download()} />}
-              {/* <NavigateNextIcon /> */}
+              {prev && (
+                <NavigateBefore
+                  className={styles.Icon}
+                  onClick={() => prev()}
+                />
+              )}
+
+              {download && (
+                <Download className={styles.Icon} onClick={() => download()} />
+              )}
+
+              {next && (
+                <NavigateNext className={styles.Icon} onClick={() => next()} />
+              )}
             </div>
           )}
         </>
