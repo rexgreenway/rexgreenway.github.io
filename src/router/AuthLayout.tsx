@@ -7,15 +7,25 @@ import { PasswordModal } from "@components/modals";
 
 const AuthGuard = () => {
   const { token, clearToken } = useAuth();
-  const [authenticated, setAuthenticated] = useState(token.token !== null);
+
+  const [authenticated, setAuthenticated] = useState(false);
 
   useEffect(() => {
-    if (!token.token || (token.token && token.expires < new Date())) {
-      setAuthenticated(false);
-      if (token.token) {
-        clearToken();
-      }
+    if (import.meta.env.VITE_LOCAL === "true") {
+      setAuthenticated(true);
+      return;
     }
+
+    if (token.token && token.token && token.expires > new Date()) {
+      setAuthenticated(true);
+      return;
+    }
+
+    setAuthenticated(false);
+    if (token.token) {
+      clearToken();
+    }
+    return;
   }, [token]);
 
   return (
