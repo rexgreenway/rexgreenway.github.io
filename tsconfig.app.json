@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "paths": {
-      "@contexts": ["./src/contexts"]
+      "@api": ["./src/api"],
+      "@contexts": ["./src/contexts"],
     },
 
     "target": "ES2020",

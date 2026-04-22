@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useAuth } from "@contexts";
 
-import { rexApi } from "../api";
+import { rexApi } from "@api";
 
 import styles from "./Auth.module.css";
 

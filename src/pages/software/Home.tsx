@@ -1,6 +1,6 @@
 import { useState, useEffect, ReactElement } from "react";
 
-import { ghApi } from "../../api";
+import { ghApi } from "@api";
 
 import Project from "../../components/Project";
 import About from "../../components/About";

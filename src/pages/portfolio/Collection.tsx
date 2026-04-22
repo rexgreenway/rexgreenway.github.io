@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 
+import { rexApi } from "@api";
 import { useAuth } from "@contexts";
 
 import { ALBUMS } from "../../api/rex-api/loadAlbums";
-import { rexApi } from "../../api";
 
 import SectionTitle from "../../components/SectionTitle";
 import {

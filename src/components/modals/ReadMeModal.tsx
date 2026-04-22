@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 
-import { ghApi } from "../../api";
+import { ghApi } from "@api";
 
 import Modal from "./Modal";
 

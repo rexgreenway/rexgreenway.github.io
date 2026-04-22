@@ -2,9 +2,8 @@ import { useEffect } from "react";
 import { Outlet, useLocation, useNavigation } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 
+import { rexApi } from "@api";
 import { useTheme, Theme } from "@contexts";
-
-import { rexApi } from "../api";
 
 import Header, { SimpleHeader } from "../components/Header";
 import Footer from "../components/Footer";
