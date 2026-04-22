@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import { AuthProvider, useAuth } from "@contexts";
 
-import { PasswordModal } from "../components/modals";
+import { PasswordModal } from "@components/modals";
 
 const AuthGuard = () => {
   const { token, clearToken } = useAuth();
