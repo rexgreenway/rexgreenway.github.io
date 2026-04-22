@@ -7,7 +7,7 @@ import { useAuth } from "@contexts";
 import { Thumbnail, ThumbnailGrid } from "@components/containers";
 import { ImageModal } from "@components/modals";
 
-import SectionTitle from "../../components/SectionTitle";
+import { SectionTitle } from "@components";
 
 import ALBUMS from "../../assets/albums";
 

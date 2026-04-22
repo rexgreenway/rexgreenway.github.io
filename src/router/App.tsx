@@ -4,10 +4,7 @@ import { CircularProgress } from "@mui/material";
 
 import { rexApi } from "@api";
 import { useTheme, Theme } from "@contexts";
-
-import Header, { SimpleHeader } from "../components/Header";
-import Footer from "../components/Footer";
-import { HorizontalLine } from "../components/elements";
+import { Footer, Header, HorizontalLine, SimpleHeader } from "@components";
 
 import routes from "./routes";
 
