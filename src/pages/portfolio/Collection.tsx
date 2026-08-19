@@ -98,7 +98,6 @@ const Collection = () => {
           {"<- Back"}
         </NavLink>
         <div className={styles.CollectionTitle}>
-          <p>{collectionId}</p>
           <SectionTitle title={album.name} />
           {album.film_stock && (
             <h3>
