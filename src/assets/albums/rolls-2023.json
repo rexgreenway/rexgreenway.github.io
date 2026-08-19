@@ -1,5 +1,5 @@
 {
-  "greece-2023-1": {
+  "2023-06-24-OTP-A-kentmere": {
     "name": "Greece 2023 - 1",
     "thumbnail": "2023-06-24-OTP-A-kentmere-17.jpg",
     "film_stock": "Kentmere 400",
@@ -31,7 +31,7 @@
       "2023-06-24-OTP-A-kentmere-25.jpg": {}
     }
   },
-  "greece-2023-2": {
+  "2023-06-24-OTP-B-ektar": {
     "name": "Greece 2023 - 2",
     "thumbnail": "2023-06-24-OTP-B-ektar-10.jpg",
     "film_stock": "Kodak Ektar 100",
@@ -75,7 +75,7 @@
       "2023-06-24-OTP-B-ektar-37.jpg": {}
     }
   },
-  "south-america-2023-1": {
+  "2023-09-06-OTP-A-ultramax": {
     "name": "South America 2023 - 1",
     "thumbnail": "2023-09-06-OTP-A-ultramax-23.jpg",
     "film_stock": "Kodak Ultramax 400",
@@ -121,7 +121,7 @@
       "2023-09-06-OTP-A-ultramax-39.jpg": {}
     }
   },
-  "south-america-2023-2": {
+  "2023-09-06-OTP-B-ultramax": {
     "name": "South America 2023 - 2",
     "thumbnail": "2023-09-06-OTP-B-ultramax-26.jpg",
     "film_stock": "Kodak Ultramax 400",
@@ -167,7 +167,7 @@
       "2023-09-06-OTP-B-ultramax-39.jpg": {}
     }
   },
-  "south-america-2023-3": {
+  "2023-09-06-OTP-C-ektar": {
     "name": "South America 2023 - 3",
     "thumbnail": "2023-09-06-OTP-C-ektar-15.jpg",
     "film_stock": "Kodak Ektar 100",
@@ -213,7 +213,7 @@
       "2023-09-06-OTP-C-ektar-39.jpg": {}
     }
   },
-  "south-america-2023-4": {
+  "2023-09-06-OTP-D-lomo": {
     "name": "South America 2023 - 4",
     "thumbnail": "2023-09-06-OTP-D-lomo-11.jpg",
     "film_stock": "Lomo Purple",
@@ -258,7 +258,7 @@
       "2023-09-06-OTP-D-lomo-38.jpg": {}
     }
   },
-  "south-america-2023-5": {
+  "2023-09-06-OTP-E-portra-400": {
     "name": "South America 2023 - 5",
     "thumbnail": "2023-09-06-OTP-E-portra-400-04.jpg",
     "film_stock": "Kodak Portra 400",
@@ -304,7 +304,7 @@
       "2023-09-06-OTP-E-portra-400-39.jpg": {}
     }
   },
-  "wrestling": {
+  "2023-10-14-OTP-A-kentmere": {
     "name": "Wrestling",
     "thumbnail": "2023-10-14-OTP-A-kentmere-03.jpg",
     "film_stock": "Kentmere 400",

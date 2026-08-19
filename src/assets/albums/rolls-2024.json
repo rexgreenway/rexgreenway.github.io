@@ -1,5 +1,5 @@
 {
-  "los-angeles-2024-1": {
+  "2024-02-22-OTP-A-kono-monsoon": {
     "name": "Los Angeles 2024 - 1",
     "thumbnail": "2024-02-22-OTP-A-kono-monsoon-15.jpg",
     "film_stock": "Kono! Monsoon",
@@ -45,7 +45,7 @@
       "2024-02-22-OTP-A-kono-monsoon-39.jpg": {}
     }
   },
-  "los-angeles-2024-2": {
+  "2024-02-22-OTP-B-gold": {
     "name": "Los Angeles 2024 - 2",
     "thumbnail": "2024-02-22-OTP-B-gold-21.jpg",
     "film_stock": "Kodak Gold 200",
@@ -91,7 +91,7 @@
       "2024-02-22-OTP-B-gold-39.jpg": {}
     }
   },
-  "los-angeles-2024-3": {
+  "2024-02-22-OTP-C-portra-160": {
     "name": "Los Angeles 2024 - 3",
     "thumbnail": "2024-02-22-OTP-C-portra-160-36.jpg",
     "film_stock": "Kodak Portra 160",
@@ -138,7 +138,7 @@
       "2024-02-22-OTP-C-portra-160-40.jpg": {}
     }
   },
-  "malta-kew": {
+  "2024-06-21-OTP-A-kentmere": {
     "name": "Malta & Kew Gardens",
     "thumbnail": "2024-06-21-OTP-A-kentmere-25.jpg",
     "film_stock": "Kentmere 400",
@@ -171,7 +171,7 @@
       "2024-06-21-OTP-A-kentmere-26.jpg": {}
     }
   },
-  "croatia-2024-1": {
+  "2024-06-28-OTP-A-ektar": {
     "name": "Croatia 2024 - 1",
     "thumbnail": "2024-06-28-OTP-A-ektar-16.jpg",
     "film_stock": "Kodak Ektar 100",
@@ -217,7 +217,7 @@
       "2024-06-28-OTP-A-ektar-39.jpg": {}
     }
   },
-  "croatia-2024-2": {
+  "2024-08-26-OTP-A-kono-art-2-400": {
     "name": "Croatia 2024 - 2",
     "thumbnail": "2024-08-26-OTP-A-kono-art-2-400-07.jpg",
     "film_stock": "Kono! Delight Art II 400",
@@ -264,7 +264,7 @@
       "2024-08-26-OTP-A-kono-art-2-400-40.jpg": {}
     }
   },
-  "appledore-regatta-2024": {
+  "2024-08-26-OTP-B-harman-400": {
     "name": "Appledore Regatta",
     "thumbnail": "2024-08-26-OTP-B-harman-400-11.jpg",
     "film_stock": "Harman Pheonix (I) 200 ",
@@ -310,7 +310,7 @@
       "2024-08-26-OTP-B-harman-400-39.jpg": {}
     }
   },
-  "nikon-fm-test": {
+  "2024-10-09-NFM-A-gold": {
     "name": "Nikon FM Test Roll",
     "thumbnail": "2024-10-09-NFM-A-gold-02.jpg",
     "film_stock": "Kodak Gold 200",
@@ -355,7 +355,7 @@
       "2024-10-09-NFM-A-gold-38.jpg": {}
     }
   },
-  "brighton-2024": {
+  "2024-10-09-OTP-A-tmax": {
     "name": "Brighton 2024",
     "thumbnail": "2024-10-09-OTP-A-tmax-01.jpg",
     "film_stock": "Kodak TMAX 100",
@@ -400,7 +400,7 @@
       "2024-10-09-OTP-A-tmax-38.jpg": {}
     }
   },
-  "london-winter-24-25-1": {
+  "2024-11-07-NFM-A-konica-expired": {
     "name": "London Winter 2024/2025 - 1",
     "thumbnail": "2024-11-07-NFM-A-konica-expired-29.jpg",
     "film_stock": "Konica (expired)",
