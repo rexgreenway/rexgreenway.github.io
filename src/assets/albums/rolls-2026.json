@@ -1,5 +1,5 @@
 {
-  "winter-25": {
+  "2026-01-14-OTP-A-xp2": {
     "name": "Winter 2025",
     "thumbnail": "2026-01-14-OTP-A-xp2-17.jpg",
     "film_stock": "Ilford XP2 Super",
@@ -40,7 +40,7 @@
       "2026-01-14-OTP-A-xp2-34.jpg": {}
     }
   },
-  "belfast-london-25": {
+  "2026-01-24-NFM-A-delta-3200": {
     "name": "Belfast To London",
     "thumbnail": "2026-01-24-NFM-A-delta-3200-35.jpg",
     "film_stock": "Ilford Delta 3200",
@@ -82,7 +82,7 @@
       "2026-01-24-NFM-A-delta-3200-35.jpg": {}
     }
   },
-  "start-2026-1": {
+  "2026-04-07-NFM-A-portra-800": {
     "name": "Start of 2026 - 1",
     "thumbnail": "2026-04-07-NFM-A-portra-800-19.jpg",
     "film_stock": "Kodak Portra 800",
@@ -124,7 +124,7 @@
       "2026-04-07-NFM-A-portra-800-35.jpg": {}
     }
   },
-  "start-2026-2": {
+  "2026-04-07-OTP-A-ultramax": {
     "name": "Start of 2026 - 2",
     "thumbnail": "2026-04-07-OTP-A-ultramax-32.jpg",
     "film_stock": "Kodak Ultramax 400",
@@ -170,10 +170,10 @@
       "2026-04-07-OTP-A-ultramax-39.jpg": {}
     }
   },
-  "beach-club": {
+  "2026-04-12-OTP-A-xp2": {
     "name": "Beach to Club",
     "thumbnail": "2026-04-12-OTP-A-xp2-36.jpg",
-    "film_stock": "Kodak XP2 Super",
+    "film_stock": "Ilford XP2 Super",
     "photos": {
       "2026-04-12-OTP-A-xp2-01.jpg": {},
       "2026-04-12-OTP-A-xp2-02.jpg": {},
@@ -216,8 +216,8 @@
       "2026-04-12-OTP-A-xp2-39.jpg": {}
     }
   },
-  "easter-and-london-1": {
-    "name": "Easter in Devon & David's Birthday",
+  "2026-05-24-NFM-A-ektar": {
+    "name": "Easter, Plymouth, & David's Birthday",
     "thumbnail": "2026-05-24-NFM-A-ektar-18.jpg",
     "film_stock": "Kodak Ektar 100",
     "photos": {
@@ -260,7 +260,7 @@
       "2026-05-24-NFM-A-ektar-37.jpg": {}
     }
   },
-  "easter-and-london-2": {
+  "2026-05-24-OTP-A-ultramax": {
     "name": "Liverpool & Alice-Mae's 2nd Birthday",
     "thumbnail": "2026-05-24-OTP-A-ultramax-18.jpg",
     "film_stock": "Kodak XP 400",
