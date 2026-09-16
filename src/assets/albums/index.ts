@@ -9,19 +9,36 @@ interface Album {
   photos: { [name: string]: PhotoInfo };
 }
 
-// Find all the film roll JSON files
-const rolls = import.meta.glob<{ default: Record<string, Album> }>("./*.json", {
-  eager: true,
-});
-
 const loadAlbums = (): Record<string, Album> => {
+  // Find & read out all the film roll JSON files
+  const rolls = import.meta.glob<{ default: Record<string, Album> }>(
+    "./*.json",
+    { eager: true },
+  );
+
+  // Merge roll json into single object
   const merged: Record<string, Album> = {};
   for (const path in rolls) {
     const mod = rolls[path];
     const obj = mod.default;
     Object.assign(merged, obj);
   }
-  return merged;
+
+  // Sort albums so most recent appear first
+  const sorted = Object.keys(merged)
+    .sort((a, b) => {
+      if (a > b) {
+        return -1;
+      } else {
+        return 1;
+      }
+    })
+    .reduce((obj: { [key: string]: Album }, key) => {
+      obj[key] = merged[key];
+      return obj;
+    }, {});
+
+  return sorted;
 };
 
 const ALBUMS: { [key: string]: Album } = loadAlbums();
